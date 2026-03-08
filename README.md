@@ -134,3 +134,6 @@ Las siguientes herramientas fueron utilizadas durante el desarrollo de este proy
 Este proyecto representa una aplicación práctica de los principios de diseño de bases de datos en un escenario relacionado con la gestión de un restaurante. Al seguir metodologías estructuradas de diseño y documentar todo el proceso, el equipo desarrolló un modelo relacional claro y organizado que garantiza consistencia, escalabilidad e integridad de los datos.
 
 El repositorio funciona como un registro del proceso de diseño de la base de datos y demuestra el trabajo colaborativo del equipo al aplicar conceptos teóricos de bases de datos en un sistema práctico.
+## Diagrama Entidad-Relación
+
+![ER Diagram](assets/er-diagram-image.png)
