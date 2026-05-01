@@ -1,139 +1,90 @@
-# Base de Datos de Reservaciones para Restaurante
+# Sistema de Gestión de Reservaciones de Restaurante
 
-## Descripción General del Proyecto
+## Descripción del Proyecto
+Este proyecto consiste en el desarrollo de un sistema web para la gestión de reservaciones en un restaurante. Permite registrar clientes, administrar mesas y gestionar reservaciones de forma organizada, asegurando una correcta asignación de espacios según la capacidad disponible.
 
-Este proyecto consiste en el diseño y la documentación de una base de datos relacional para gestionar un sistema de reservaciones de un restaurante. El objetivo del sistema es organizar y almacenar información esencial relacionada con clientes, reservaciones, mesas, pedidos y pagos dentro de un entorno de restaurante.
-
-La base de datos fue diseñada siguiendo principios fundamentales de arquitectura de bases de datos y modelado relacional. A lo largo del desarrollo del proyecto se aplicaron conceptos como el modelado Entidad-Relación, normalización, llaves primarias y foráneas, así como restricciones de integridad de datos.
-
-El propósito principal del sistema es asegurar que las operaciones relacionadas con reservaciones y gestión de clientes dentro de un restaurante puedan almacenarse y consultarse de manera eficiente, manteniendo consistencia y confiabilidad en la información almacenada.
+La interfaz fue diseñada como un panel tipo dashboard, priorizando la claridad y la facilidad de uso.
 
 ---
 
-## Objetivos del Proyecto
-
-Los objetivos principales de este proyecto son:
-
-- Diseñar una base de datos relacional estructurada para un sistema de gestión de restaurante.
-- Aplicar el modelado Entidad-Relación (E-R) para representar las relaciones entre las entidades del sistema.
-- Crear un Diccionario de Datos detallado que describa los atributos de cada entidad.
-- Implementar restricciones lógicas dentro de la base de datos como Llaves Primarias, Llaves Foráneas, NOT NULL y UNIQUE.
-- Aplicar técnicas de normalización (1FN, 2FN y 3FN) para reducir redundancia y mantener la consistencia de los datos.
-- Documentar todo el proceso de diseño de forma clara y organizada dentro de un repositorio.
+## Objetivo
+Desarrollar una solución digital que optimice el proceso de reservaciones, reduzca errores y mejore la organización del restaurante.
 
 ---
 
-## Descripción del Sistema
+## Funcionalidades Principales
 
-El sistema de base de datos propuesto se enfoca en gestionar las reservaciones dentro de un restaurante y las operaciones relacionadas con ellas. El sistema permite almacenar y organizar información sobre los clientes que realizan reservaciones, las mesas disponibles dentro del restaurante y los pedidos asociados a dichas reservaciones.
+### Gestión de Clientes
+- Registro de clientes
+- Datos:
+  - Nombre
+  - Teléfono
+  - Email (opcional)
 
-El diseño asegura que cada reservación esté correctamente vinculada con un cliente y con una mesa específica, permitiendo además manejar múltiples reservaciones y mantener registros precisos de la información.
+### Gestión de Mesas
+- Registro de mesas con:
+  - Número
+  - Capacidad
+  - Ubicación
+- La disponibilidad se calcula automáticamente
 
-Al estructurar correctamente la base de datos, el sistema evita problemas como información duplicada, datos inconsistentes o registros sin relación dentro de la base de datos.
-
----
-
-## Componentes del Diseño de la Base de Datos
-
-El proyecto incluye varios componentes clave que representan el proceso de diseño de la base de datos.
-
-### Diagrama Entidad-Relación (ERD)
-
-El diagrama Entidad-Relación representa visualmente las entidades involucradas en el sistema y las relaciones entre ellas. Este diagrama permite entender cómo se estructura la información y cómo interactúan las diferentes partes del sistema.
-
-### Diccionario de Datos
-
-El Diccionario de Datos describe cada tabla de la base de datos, incluyendo:
-
-- Nombre de los atributos  
-- Tipos de datos  
-- Tamaño de los campos  
-- Llaves Primarias (PK)  
-- Llaves Foráneas (FK)  
-- Permiso de valores nulos  
-- Descripción de cada atributo  
-
-Este documento funciona como una referencia para comprender la estructura completa de la base de datos.
-
-### Proceso de Normalización
-
-Durante el diseño de la base de datos se aplicaron reglas de normalización para organizar los datos de forma eficiente. El equipo revisó la estructura de las tablas para asegurar que cumplieran con las siguientes formas normales:
-
-- Primera Forma Normal (1FN)  
-- Segunda Forma Normal (2FN)  
-- Tercera Forma Normal (3FN)  
-
-Este proceso ayudó a reducir la redundancia y mantener dependencias lógicas correctas entre los datos.
+### Gestión de Reservaciones
+- Crear reservaciones con:
+  - Cliente
+  - Mesa asignada
+  - Fecha y hora (campo unificado)
+  - Número de personas
+- Validaciones:
+  - El número de personas no puede exceder la capacidad de la mesa
+- Estado de la reservación:
+  - Activa
+  - Cancelada
+  - Finalizada
 
 ---
 
-## Integrantes del Equipo y Roles
+## Estructura del Sistema
 
-El proyecto fue desarrollado de forma colaborativa por los siguientes integrantes, donde cada uno contribuyó en una parte específica del proceso de diseño de la base de datos:
+### Base de Datos
 
-- **Fernanda** — Analista y Diseñadora (Arquitecta)  
-Responsable de explicar la lógica del negocio del sistema y presentar el Diagrama Entidad-Relación.
+**Clientes**
+- id_cliente (PK)
+- nombre
+- telefono
+- email
 
-- **Karen** — Desarrolladora SQL (Constructora)  
-Responsable de presentar el Diccionario de Datos y explicar la elección de tipos de datos y restricciones lógicas.
+**Mesas**
+- id_mesa (PK)
+- numero
+- capacidad
+- ubicacion
 
-- **Gabriel** — Administrador de Base de Datos (DBA)  
-Responsable de explicar la estructura e importancia de las Llaves Primarias (PK) y Llaves Foráneas (FK) para garantizar la integridad de los datos.
-
-- **Alexis** — Query Master y SQL Tester  
-Responsable de explicar las dificultades técnicas enfrentadas durante el proceso de normalización y las modificaciones realizadas para mejorar la estructura de la base de datos.
-
----
-
-## Integración de Inteligencia Artificial
-
-Como parte del proceso de aprendizaje, el equipo interactuó con una inteligencia artificial que actuó como un **“Senior DBA Mentor”**. Esta herramienta fue utilizada como guía para comprender mejor conceptos relacionados con el diseño de bases de datos, sin proporcionar directamente las soluciones completas.
-
-Durante esta interacción, el equipo realizó preguntas relacionadas con:
-
-- Normalización de bases de datos  
-- Modelado de relaciones  
-- Restricciones de integridad de datos  
-- Estructura del diagrama Entidad-Relación  
-
-Las respuestas obtenidas ayudaron al equipo a mejorar sus decisiones de diseño y fortalecer su comprensión de la arquitectura de bases de datos relacionales.
+**Reservaciones**
+- id_reservacion (PK)
+- cliente_id (FK)
+- mesa_id (FK)
+- fecha_hora
+- personas
+- estado
 
 ---
 
-## Estructura del Repositorio
-
-```
-restaurant-reservations-db
-│
-├── README.md
-│
-├── docs
-│   ├── user-stories.md
-│   └── data-dictionary.docx
-│
-├── diagrams
-│   └── er-diagram-mermaid.md
-│
-└── assets
-    └── er-diagram-image.png
-```
+## Tecnologías Utilizadas
+-MongoDB
+- Figma
 
 ---
 
-## Tecnologías y Herramientas Utilizadas
-
-Las siguientes herramientas fueron utilizadas durante el desarrollo de este proyecto:
-
-- GitHub para control de versiones y documentación del proyecto
-- Mermaid para la creación del diagrama Entidad-Relación
-- Word para el Diccionario de Datos
-
+## Lógica del Sistema
+- La disponibilidad de mesas no se almacena, se calcula en función de las reservaciones existentes.
+- Se evita la duplicación de datos mediante el uso de claves foráneas.
+- Se implementan validaciones para garantizar la integridad de la información.
 
 ---
 
-Este proyecto representa una aplicación práctica de los principios de diseño de bases de datos en un escenario relacionado con la gestión de un restaurante. Al seguir metodologías estructuradas de diseño y documentar todo el proceso, el equipo desarrolló un modelo relacional claro y organizado que garantiza consistencia, escalabilidad e integridad de los datos.
+## Ejecución del Proyecto
 
-El repositorio funciona como un registro del proceso de diseño de la base de datos y demuestra el trabajo colaborativo del equipo al aplicar conceptos teóricos de bases de datos en un sistema práctico.
-## Diagrama Entidad-Relación
-
-![ER Diagram](assets/er-diagram-image.png)
+1. Instalar un servidor local (XAMPP o WAMP)
+2. Colocar el proyecto en la carpeta `htdocs`
+3. Importar la base de datos en phpMyAdmin
+4. Ejecutar en el navegador:
