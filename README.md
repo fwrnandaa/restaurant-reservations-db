@@ -82,9 +82,3 @@ Desarrollar una solución digital que optimice el proceso de reservaciones, redu
 
 ---
 
-## Ejecución del Proyecto
-
-1. Instalar un servidor local (XAMPP o WAMP)
-2. Colocar el proyecto en la carpeta `htdocs`
-3. Importar la base de datos en phpMyAdmin
-4. Ejecutar en el navegador:
