@@ -19,7 +19,7 @@ Desarrollar una solución digital que optimice el proceso de reservaciones, redu
 - Datos:
   - Nombre
   - Teléfono
-  - Email (opcional)
+  - Email 
 
 ### Gestión de Mesas
 - Registro de mesas con:
