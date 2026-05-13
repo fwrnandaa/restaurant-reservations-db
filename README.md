@@ -1,82 +1,89 @@
 # 🍡 Mochi House
 
-Sistema web de reservaciones para restaurantes con menú digital interactivo, diseñado para optimizar la experiencia del usuario y reducir errores o confusiones durante el proceso de atención y reservación.
+![Status](https://img.shields.io/badge/status-development-ff69b4)
+![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-f8c8dc)
+![Backend](https://img.shields.io/badge/backend-PHP-8993be)
+![Database](https://img.shields.io/badge/database-MySQL-4479A1)
+![Environment](https://img.shields.io/badge/environment-XAMPP-orange)
+![License](https://img.shields.io/badge/license-Academic-lightgrey)
 
-Mochi House surge como un proyecto académico enfocado en el desarrollo de un sistema moderno, intuitivo y visualmente atractivo, integrando tecnologías web y bases de datos relacionales para la gestión eficiente de clientes y reservaciones.
-
----
-
-## ✨ Características Principales
-
-- 📅 Sistema de reservaciones
-- 🍱 Menú digital interactivo
-- 👥 Gestión de clientes
-- 🔐 Roles de usuario
-- ✅ Confirmación de reservaciones
-- 🎨 Interfaz visual inspirada en estilo kawaii japonés
-- 🌐 Sistema web accesible desde navegador
-- 💻 Desarrollo orientado a experiencia de usuario
+> Mochi House is a web-based restaurant reservation system featuring an interactive digital menu designed to simplify restaurant management, improve customer experience, and reduce confusion during the reservation process.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+# 📖 Table of Contents
 
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
+- [⚡ Getting Started](#-getting-started)
+- [💻 Usage](#-usage)
+- [🏛️ Architecture & Tech Stack](#️-architecture--tech-stack)
+- [🗄️ Database](#️-database)
+- [📂 Project Structure](#-project-structure)
+- [🎨 UI Design](#-ui-design)
+- [🧪 Running Tests](#-running-tests)
+- [🤝 Contributing](#-contributing)
+- [👨‍💻 Authors](#-authors)
+- [📄 License](#-license)
 
-### Backend
+---
+
+# ⚡ Getting Started
+
+Follow these instructions to run the project locally using XAMPP.
+
+## Prerequisites
+
+Before running the system, make sure you have installed:
+
+- XAMPP
 - PHP
-
-### Base de Datos
 - MySQL
-
-### Herramientas
-- XAMPP
-- GitHub
-- Figma
+- Git
+- Modern web browser
 
 ---
 
-## 🚀 Instalación y Ejecución
+## Installation
 
-### Prerrequisitos
-
-Antes de ejecutar el proyecto es necesario tener instalado:
-
-- XAMPP
-- Navegador web moderno
-- MySQL
-- PHP compatible con XAMPP
-
----
-
-### Pasos de instalación
-
-1. Clonar el repositorio:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/usuario/mochi-house.git
+git clone https://github.com/your-username/mochi-house.git
 ```
 
-2. Mover el proyecto a la carpeta `htdocs` de XAMPP.
+### 2. Move the project folder into XAMPP
 
-Ejemplo:
+Place the folder inside:
 
 ```txt
-C:/xampp/htdocs/mochi-house
+C:/xampp/htdocs/
 ```
 
-3. Iniciar los servicios de:
+---
+
+### 3. Start Apache and MySQL
+
+Open the XAMPP Control Panel and start:
+
 - Apache
 - MySQL
 
-Desde el panel de control de XAMPP.
+---
 
-4. Importar la base de datos en phpMyAdmin.
+### 4. Import the database
 
-5. Abrir el navegador y ejecutar:
+Open:
+
+```txt
+http://localhost/phpmyadmin
+```
+
+Create the database and import the `.sql` file.
+
+---
+
+### 5. Run the project
+
+Open your browser and navigate to:
 
 ```txt
 http://localhost/mochi-house
@@ -84,7 +91,57 @@ http://localhost/mochi-house
 
 ---
 
-## 📂 Estructura General del Proyecto
+# 💻 Usage
+
+Mochi House allows users to:
+
+- Browse an interactive digital menu
+- Make restaurant reservations
+- Receive reservation confirmations
+- Manage user roles
+- Improve restaurant organization and customer flow
+
+The system is currently under development as part of an academic project focused on web technologies and relational databases.
+
+---
+
+# 🏛️ Architecture & Tech Stack
+
+The project follows a client-server web architecture focused on usability, modularity, and responsive visual design.
+
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+- PHP
+
+## Database
+- MySQL
+
+## Tools & Platforms
+- XAMPP
+- GitHub
+- Figma
+
+---
+
+# 🗄️ Database
+
+Mochi House uses a relational database structure developed with MySQL.
+
+The database is intended to manage:
+
+- Users
+- Clients
+- Reservations
+- User roles
+- Digital menu information
+
+---
+
+# 📂 Project Structure
 
 ```txt
 MochiHouse/
@@ -99,63 +156,39 @@ MochiHouse/
 └── README.md
 ```
 
-> La estructura puede cambiar conforme avance el desarrollo del proyecto.
+> The structure may change as development progresses.
 
 ---
 
-## 🧩 Funcionalidades del Sistema
+# 🎨 UI Design
 
-### 👤 Gestión de Usuarios
-- Inicio de sesión
-- Roles de usuario
-- Validación de acceso
+The user interface was designed with a kawaii-inspired Japanese aesthetic using soft pastel colors and modern visual elements to create a friendly and interactive experience.
 
-### 🍽️ Sistema de Reservaciones
-- Registro de reservaciones
-- Confirmación de reservas
-- Administración de clientes
-
-### 📱 Menú Digital
-- Visualización interactiva del menú
-- Interfaz intuitiva y accesible
+The interface prototypes were initially designed in Figma before development implementation.
 
 ---
 
-## 🗄️ Base de Datos
+# 🧪 Running Tests
 
-El sistema utiliza una base de datos relacional desarrollada en MySQL para almacenar información relacionada con:
+Currently, automated tests are not implemented.
 
-- Usuarios
-- Clientes
-- Reservaciones
-- Roles
-- Información del menú
+Future versions may include:
 
----
-
-## 🎨 Diseño e Interfaz
-
-El diseño visual del sistema fue desarrollado con inspiración en una estética japonesa kawaii utilizando colores suaves y elementos visuales amigables para mejorar la experiencia del usuario.
-
-Las interfaces fueron diseñadas previamente en Figma para mantener coherencia visual y una estructura organizada durante el desarrollo.
+- Functional testing
+- Validation testing
+- Database integration testing
 
 ---
 
-## 📌 Estado del Proyecto
+# 🤝 Contributing
 
-🚧 Proyecto actualmente en desarrollo.
+This project was developed for academic purposes.
 
-Este sistema está siendo desarrollado como parte de un proyecto académico enfocado en el uso de tecnologías web y bases de datos relacionales.
-
----
-
-## 🤝 Contribución
-
-Este proyecto fue desarrollado con fines educativos. Actualmente no se aceptan contribuciones externas.
+External contributions are currently not available.
 
 ---
 
-## 👨‍💻 Autores
+# 👨‍💻 Authors
 
 - Fernanda Martinez Martinez
 - Karen Yazbeth Rivera Aguirre
@@ -164,10 +197,10 @@ Este proyecto fue desarrollado con fines educativos. Actualmente no se aceptan c
 
 ---
 
-## 📄 Licencia
+# 📄 License
 
-Este proyecto no cuenta actualmente con una licencia oficial.
+This project currently does not have an official software license.
 
-Uso académico únicamente.
+Developed for academic and educational purposes only.
 
 ---
