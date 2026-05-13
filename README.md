@@ -1,84 +1,173 @@
-# Sistema de Gestión de Reservaciones de Restaurante
+# 🍡 Mochi House
 
-## Descripción del Proyecto
-Este proyecto consiste en el desarrollo de un sistema web para la gestión de reservaciones en un restaurante. Permite registrar clientes, administrar mesas y gestionar reservaciones de forma organizada, asegurando una correcta asignación de espacios según la capacidad disponible.
+Sistema web de reservaciones para restaurantes con menú digital interactivo, diseñado para optimizar la experiencia del usuario y reducir errores o confusiones durante el proceso de atención y reservación.
 
-La interfaz fue diseñada como un panel tipo dashboard, priorizando la claridad y la facilidad de uso.
-
----
-
-## Objetivo
-Desarrollar una solución digital que optimice el proceso de reservaciones, reduzca errores y mejore la organización del restaurante.
+Mochi House surge como un proyecto académico enfocado en el desarrollo de un sistema moderno, intuitivo y visualmente atractivo, integrando tecnologías web y bases de datos relacionales para la gestión eficiente de clientes y reservaciones.
 
 ---
 
-## Funcionalidades Principales
+## ✨ Características Principales
 
-### Gestión de Clientes
-- Registro de clientes
-- Datos:
-  - Nombre
-  - Teléfono
-  - Email 
-
-### Gestión de Mesas
-- Registro de mesas con:
-  - Número
-  - Capacidad
-  - Ubicación
-- La disponibilidad se calcula automáticamente
-
-### Gestión de Reservaciones
-- Crear reservaciones con:
-  - Cliente
-  - Mesa asignada
-  - Fecha y hora (campo unificado)
-  - Número de personas
-- Validaciones:
-  - El número de personas no puede exceder la capacidad de la mesa
-- Estado de la reservación:
-  - Activa
-  - Cancelada
-  - Finalizada
+- 📅 Sistema de reservaciones
+- 🍱 Menú digital interactivo
+- 👥 Gestión de clientes
+- 🔐 Roles de usuario
+- ✅ Confirmación de reservaciones
+- 🎨 Interfaz visual inspirada en estilo kawaii japonés
+- 🌐 Sistema web accesible desde navegador
+- 💻 Desarrollo orientado a experiencia de usuario
 
 ---
 
-## Estructura del Sistema
+## 🛠️ Tecnologías Utilizadas
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- PHP
 
 ### Base de Datos
+- MySQL
 
-**Clientes**
-- id_cliente (PK)
-- nombre
-- telefono
-- email
-
-**Mesas**
-- id_mesa (PK)
-- numero
-- capacidad
-- ubicacion
-
-**Reservaciones**
-- id_reservacion (PK)
-- cliente_id (FK)
-- mesa_id (FK)
-- fecha_hora
-- personas
-- estado
-
----
-
-## Tecnologías Utilizadas
--MongoDB
+### Herramientas
+- XAMPP
+- GitHub
 - Figma
 
 ---
 
-## Lógica del Sistema
-- La disponibilidad de mesas no se almacena, se calcula en función de las reservaciones existentes.
-- Se evita la duplicación de datos mediante el uso de claves foráneas.
-- Se implementan validaciones para garantizar la integridad de la información.
+## 🚀 Instalación y Ejecución
+
+### Prerrequisitos
+
+Antes de ejecutar el proyecto es necesario tener instalado:
+
+- XAMPP
+- Navegador web moderno
+- MySQL
+- PHP compatible con XAMPP
 
 ---
 
+### Pasos de instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/usuario/mochi-house.git
+```
+
+2. Mover el proyecto a la carpeta `htdocs` de XAMPP.
+
+Ejemplo:
+
+```txt
+C:/xampp/htdocs/mochi-house
+```
+
+3. Iniciar los servicios de:
+- Apache
+- MySQL
+
+Desde el panel de control de XAMPP.
+
+4. Importar la base de datos en phpMyAdmin.
+
+5. Abrir el navegador y ejecutar:
+
+```txt
+http://localhost/mochi-house
+```
+
+---
+
+## 📂 Estructura General del Proyecto
+
+```txt
+MochiHouse/
+│
+├── css/
+├── js/
+├── img/
+├── php/
+├── database/
+├── assets/
+├── index.html
+└── README.md
+```
+
+> La estructura puede cambiar conforme avance el desarrollo del proyecto.
+
+---
+
+## 🧩 Funcionalidades del Sistema
+
+### 👤 Gestión de Usuarios
+- Inicio de sesión
+- Roles de usuario
+- Validación de acceso
+
+### 🍽️ Sistema de Reservaciones
+- Registro de reservaciones
+- Confirmación de reservas
+- Administración de clientes
+
+### 📱 Menú Digital
+- Visualización interactiva del menú
+- Interfaz intuitiva y accesible
+
+---
+
+## 🗄️ Base de Datos
+
+El sistema utiliza una base de datos relacional desarrollada en MySQL para almacenar información relacionada con:
+
+- Usuarios
+- Clientes
+- Reservaciones
+- Roles
+- Información del menú
+
+---
+
+## 🎨 Diseño e Interfaz
+
+El diseño visual del sistema fue desarrollado con inspiración en una estética japonesa kawaii utilizando colores suaves y elementos visuales amigables para mejorar la experiencia del usuario.
+
+Las interfaces fueron diseñadas previamente en Figma para mantener coherencia visual y una estructura organizada durante el desarrollo.
+
+---
+
+## 📌 Estado del Proyecto
+
+🚧 Proyecto actualmente en desarrollo.
+
+Este sistema está siendo desarrollado como parte de un proyecto académico enfocado en el uso de tecnologías web y bases de datos relacionales.
+
+---
+
+## 🤝 Contribución
+
+Este proyecto fue desarrollado con fines educativos. Actualmente no se aceptan contribuciones externas.
+
+---
+
+## 👨‍💻 Autores
+
+- Fernanda Martinez Martinez
+- Karen Yazbeth Rivera Aguirre
+- Alberto Leonel Elizalde Vian
+- Alexis Benitez Fuentes
+
+---
+
+## 📄 Licencia
+
+Este proyecto no cuenta actualmente con una licencia oficial.
+
+Uso académico únicamente.
+
+---
