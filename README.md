@@ -1,4 +1,4 @@
-# 🍡 Mochi House
+# 🍡 Mochi House Reservation System
 
 ![Status](https://img.shields.io/badge/status-development-ff69b4)
 ![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-f8c8dc)
@@ -7,107 +7,55 @@
 ![Environment](https://img.shields.io/badge/environment-XAMPP-orange)
 ![License](https://img.shields.io/badge/license-Academic-lightgrey)
 
-> Mochi House is a web-based restaurant reservation system featuring an interactive digital menu designed to simplify restaurant management, improve customer experience, and reduce confusion during the reservation process.
+> Mochi House is a restaurant reservation management system developed as an academic project using PHP and MySQL. The system allows users to manage reservations through an interactive table layout while preventing scheduling conflicts based on date, time, and selected table.
 
 ---
 
 # 📖 Table of Contents
 
-- [⚡ Getting Started](#-getting-started)
-- [💻 Usage](#-usage)
-- [🏛️ Architecture & Tech Stack](#️-architecture--tech-stack)
-- [🗄️ Database](#️-database)
+- [📌 About the Project](#-about-the-project)
+- [✨ Features](#-features)
+- [🛠️ Technologies](#️-technologies)
+- [⚡ Installation](#-installation)
+- [💻 System Usage](#-system-usage)
+- [🗄️ Database Structure](#️-database-structure)
 - [📂 Project Structure](#-project-structure)
-- [🎨 UI Design](#-ui-design)
-- [🧪 Running Tests](#-running-tests)
-- [🤝 Contributing](#-contributing)
+- [🎨 Interface Design](#-interface-design)
+- [🔒 Reservation Validation Logic](#-reservation-validation-logic)
+- [🚀 Future Improvements](#-future-improvements)
 - [👨‍💻 Authors](#-authors)
 - [📄 License](#-license)
 
 ---
 
-# ⚡ Getting Started
+# 📌 About the Project
 
-Follow these instructions to run the project locally using XAMPP.
+Mochi House Reservation System was developed to improve restaurant organization by providing a digital solution for reservation management.
 
-## Prerequisites
+The system focuses on preventing reservation conflicts and improving the customer experience through an intuitive and visually appealing interface inspired by Japanese kawaii aesthetics.
 
-Before running the system, make sure you have installed:
+One of the main features of the project is the interactive restaurant layout, where reservations are assigned directly to tables according to the selected date and time.
 
-- XAMPP
-- PHP
-- MySQL
-- Git
-- Modern web browser
+The project was developed as part of a relational database and web development academic course.
 
 ---
 
-## Installation
+# ✨ Features
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/mochi-house.git
-```
-
-### 2. Move the project folder into XAMPP
-
-Place the folder inside:
-
-```txt
-C:/xampp/htdocs/
-```
+- Interactive restaurant table layout
+- Reservation registration system
+- Validation of reservation conflicts
+- Date and time availability control
+- Visual organization of restaurant tables
+- Responsive and modern interface
+- Digital menu integration
+- Reservation management panel
+- User role management
+- Database connection with MySQL
 
 ---
 
-### 3. Start Apache and MySQL
-
-Open the XAMPP Control Panel and start:
-
-- Apache
-- MySQL
-
----
-
-### 4. Import the database
-
-Open:
-
-```txt
-http://localhost/phpmyadmin
-```
-
-Create the database and import the `.sql` file.
-
----
-
-### 5. Run the project
-
-Open your browser and navigate to:
-
-```txt
-http://localhost/mochi-house
-```
-
----
-
-# 💻 Usage
-
-Mochi House allows users to:
-
-- Browse an interactive digital menu
-- Make restaurant reservations
-- Receive reservation confirmations
-- Manage user roles
-- Improve restaurant organization and customer flow
-
-The system is currently under development as part of an academic project focused on web technologies and relational databases.
-
----
-
-# 🏛️ Architecture & Tech Stack
-
-The project follows a client-server web architecture focused on usability, modularity, and responsive visual design.
+# 🛠️ Technologies
 
 ## Frontend
 - HTML5
@@ -120,24 +68,115 @@ The project follows a client-server web architecture focused on usability, modul
 ## Database
 - MySQL
 
-## Tools & Platforms
+## Development Tools
 - XAMPP
-- GitHub
+- phpMyAdmin
+- Git & GitHub
 - Figma
+- Visual Studio Code
 
 ---
 
-# 🗄️ Database
+# ⚡ Installation
 
-Mochi House uses a relational database structure developed with MySQL.
+## Prerequisites
 
-The database is intended to manage:
+Before running the project, install the following tools:
+
+- XAMPP
+- Git
+- Modern web browser
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/mochi-house.git
+```
+
+---
+
+## 2. Move the Project Folder
+
+Place the project folder inside:
+
+```txt
+C:\xampp\htdocs\
+```
+
+---
+
+## 3. Start Apache and MySQL
+
+Open the XAMPP Control Panel and start:
+
+- Apache
+- MySQL
+
+---
+
+## 4. Import the Database
+
+Open phpMyAdmin:
+
+```txt
+http://localhost/phpmyadmin
+```
+
+Then:
+
+1. Create a new database
+2. Import the `schema.sql` file
+3. Import additional SQL files if necessary
+
+---
+
+## 5. Run the Project
+
+Open your browser and navigate to:
+
+```txt
+http://localhost/mochi_house
+```
+
+---
+
+# 💻 System Usage
+
+The system allows restaurant staff to manage reservations efficiently through a visual interface.
+
+## Reservation Flow
+
+1. The user selects a reservation date
+2. The user selects an available time
+3. A table is selected directly from the restaurant layout
+4. Reservation information is stored in the database
+5. The system validates whether the selected table is already reserved for the same date and time
+6. If no conflict exists, the reservation is successfully registered
+
+---
+
+# 🗄️ Database Structure
+
+The project uses a relational database model developed in MySQL.
+
+## Main Entities
 
 - Users
 - Clients
 - Reservations
-- User roles
-- Digital menu information
+- Tables
+- Roles
+- Menu products
+
+## Database Features
+
+- Primary and foreign keys
+- Reservation validation logic
+- Relational integrity
+- Organized reservation management
+- SQL-based structure
 
 ---
 
@@ -146,45 +185,87 @@ The database is intended to manage:
 ```txt
 MochiHouse/
 │
-├── css/
-├── js/
-├── img/
-├── php/
-├── database/
 ├── assets/
-├── index.html
+│
+├── css/
+│   └── style.css
+│
+├── database/
+│   ├── schema.sql
+│   ├── inserts.sql
+│   ├── consultas.sql
+│   ├── triggers.sql
+│   └── modelo_relacional.sql
+│
+├── images/
+│
+├── js/
+│   └── script.js
+│
+├── php/
+│   ├── conexion.php
+│   ├── reservaciones.php
+│   └── layout.php
+│
+├── index.php
+│
 └── README.md
 ```
 
-> The structure may change as development progresses.
+> The structure may continue evolving during development.
 
 ---
 
-# 🎨 UI Design
+# 🎨 Interface Design
 
-The user interface was designed with a kawaii-inspired Japanese aesthetic using soft pastel colors and modern visual elements to create a friendly and interactive experience.
+The visual identity of Mochi House was inspired by soft pastel colors and Japanese kawaii aesthetics.
 
-The interface prototypes were initially designed in Figma before development implementation.
+The interface was designed to create a friendly and modern experience while maintaining usability and organization.
+
+## Design Characteristics
+
+- Pink pastel color palette
+- Rounded UI components
+- Responsive layout
+- Interactive table visualization
+- Clean reservation forms
+- Animated visual elements
+
+The interface prototypes were initially designed in Figma before implementation.
 
 ---
 
-# 🧪 Running Tests
+# 🔒 Reservation Validation Logic
 
-Currently, automated tests are not implemented.
+One of the most important features of the system is the reservation validation process.
 
-Future versions may include:
+The system prevents duplicate reservations by validating:
 
-- Functional testing
-- Validation testing
-- Database integration testing
+- Selected date
+- Reservation time
+- Selected table
+
+If a table is already reserved at the same date and time, the system blocks the reservation and prevents conflicts.
+
+However, the same table can still be reserved at different times without issues.
+
+This logic helps maintain proper restaurant organization and availability control.
 
 ---
 
-# 🤝 Contributing
+# 🚀 Future Improvements
 
-This project was developed for academic purposes.
+Possible future updates include:
 
-External contributions are currently not available.
+- Authentication system
+- Online customer reservations
+- Email confirmations
+- Admin dashboard
+- Mobile optimization
+- Reservation history
+- Real-time table availability
+- Automated reports
+- Payment integration
 
 ---
 
@@ -199,8 +280,8 @@ External contributions are currently not available.
 
 # 📄 License
 
-This project currently does not have an official software license.
+This project was developed for academic and educational purposes only.
 
-Developed for academic and educational purposes only.
+No commercial license currently applies.
 
 ---
