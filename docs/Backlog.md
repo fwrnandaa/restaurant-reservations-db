@@ -1,545 +1,545 @@
 # Mochi House Reservation System
 
-## Sistema Profesional de Reservaciones
+## Professional Reservation System
 
 ---
 
-# Información General del Proyecto
+# General Project Information
 
-## Nombre del Proyecto
+## Project Name
 
 Mochi House Reservation System
 
 ---
 
-# Descripción General
+# General Description
 
-El sistema de reservaciones de Mochi House fue desarrollado para administrar la disponibilidad de mesas dentro de un restaurante mediante un control dinámico basado en fecha, hora y mesa seleccionada.
+The Mochi House reservation system was developed to manage table availability within a restaurant through dynamic control based on date, time, and selected table.
 
-El objetivo principal del sistema es evitar conflictos de reservaciones y mejorar la organización operativa del restaurante mediante validaciones automáticas y visualización en tiempo real de las mesas disponibles.
+The main objective of the system is to prevent reservation conflicts and improve the restaurant’s operational organization through automatic validations and real-time visualization of available tables.
 
-El sistema permite que el recepcionista gestione reservaciones utilizando un layout visual interactivo donde cada mesa posee una capacidad específica y cambia dinámicamente de estado dependiendo de las reservaciones registradas.
+The system allows the receptionist to manage reservations using an interactive visual layout where each table has a specific capacity and dynamically changes its status depending on registered reservations.
 
-La lógica principal del sistema impide que una mesa sea reservada dos veces en la misma fecha y hora.
+The core logic of the system prevents a table from being reserved twice on the same date and time.
 
-Además, el sistema valida que las reservaciones únicamente puedan realizarse dentro del horario permitido del restaurante, el cual es de 10:00 AM a 10:00 PM.
-
----
-
-# Objetivo General
-
-Desarrollar un sistema web profesional de reservaciones para restaurantes que permita administrar la disponibilidad de mesas en tiempo real mediante validaciones automáticas de fecha, hora y capacidad.
+Additionally, the system validates that reservations can only be made during the restaurant’s operating hours, which are from 10:00 AM to 10:00 PM.
 
 ---
 
-# Objetivos Específicos
+# General Objective
 
-* Implementar un layout visual interactivo para selección de mesas.
-* Validar automáticamente conflictos de reservaciones.
-* Controlar horarios válidos de atención.
-* Facilitar la organización del restaurante.
-* Centralizar las reservaciones registradas.
-* Mejorar la experiencia operativa del recepcionista.
-* Evitar duplicidad de reservaciones.
-* Mostrar disponibilidad dinámica de mesas.
+Develop a professional web-based restaurant reservation system that allows real-time table availability management through automatic validations of date, time, and capacity.
 
 ---
 
-# Alcance del Proyecto
+# Specific Objectives
 
-El sistema permite:
-
-* Registrar reservaciones.
-* Seleccionar fecha y hora.
-* Seleccionar mesa desde un layout visual.
-* Visualizar mesas disponibles.
-* Mostrar reservaciones registradas.
-* Administrar capacidades de mesas.
-* Validar horarios permitidos.
-* Evitar conflictos entre reservaciones.
+* Implement an interactive visual layout for table selection.
+* Automatically validate reservation conflicts.
+* Control valid operating hours.
+* Improve restaurant organization.
+* Centralize registered reservations.
+* Improve the receptionist’s operational experience.
+* Prevent duplicate reservations.
+* Display dynamic table availability.
 
 ---
 
-# Limitaciones del Sistema
+# Project Scope
 
-* El sistema actualmente funciona para un solo restaurante.
-* No incluye pagos en línea.
-* No incluye autenticación de usuarios.
-* No cuenta con notificaciones automáticas.
-* No incluye integración con aplicaciones móviles.
+The system allows users to:
 
----
-
-# Tecnologías Utilizadas
-
-| Tecnología | Uso                            |
-| ---------- | ------------------------------ |
-| HTML       | Estructura del sistema         |
-| CSS        | Diseño visual y estilos        |
-| JavaScript | Lógica dinámica y validaciones |
-| PHP        | Procesamiento backend          |
-| MySQL      | Base de datos                  |
-| XAMPP      | Servidor local                 |
-| GitHub     | Control de versiones           |
+* Register reservations.
+* Select date and time.
+* Select tables from a visual layout.
+* View available tables.
+* Display registered reservations.
+* Manage table capacities.
+* Validate allowed schedules.
+* Prevent reservation conflicts.
 
 ---
 
-# Roles del Sistema
+# System Limitations
 
-## Recepcionista
-
-El recepcionista es el usuario principal del sistema.
-
-Funciones:
-
-* Registrar reservaciones.
-* Ver mesas disponibles.
-* Consultar reservaciones.
-* Seleccionar mesas.
-* Confirmar disponibilidad.
-* Gestionar información del cliente.
+* The system currently works for a single restaurant.
+* It does not include online payments.
+* It does not include user authentication.
+* It does not include automatic notifications.
+* It does not include mobile application integration.
 
 ---
 
-# Equipo Scrum
+# Technologies Used
 
-| Integrante | Rol Scrum               | Responsabilidad                        |
-| ---------- | ----------------------- | -------------------------------------- |
-| Alberto    | Scrum Master            | Organización y coordinación del equipo |
-| Fernanda   | Backend Logic Developer | Desarrollo de lógica y validaciones    |
-| Alexis     | Frontend Developer      | Diseño visual e interfaz gráfica       |
-| Karen      | Backend Developer       | Programación y conexión funcional      |
+| Technology | Purpose |
+| ---------- | ------- |
+| HTML | System structure |
+| CSS | Visual design and styles |
+| JavaScript | Dynamic logic and validations |
+| PHP | Backend processing |
+| MySQL | Database |
+| XAMPP | Local server |
+| GitHub | Version control |
 
 ---
 
-# Roles Scrum
+# System Roles
+
+## Receptionist
+
+The receptionist is the main user of the system.
+
+### Functions
+
+* Register reservations.
+* View available tables.
+* Check reservations.
+* Select tables.
+* Confirm availability.
+* Manage customer information.
+
+---
+
+# Scrum Team
+
+| Member | Scrum Role | Responsibility |
+| ------ | ----------- | -------------- |
+| Alberto | Scrum Master | Team organization and coordination |
+| Fernanda | Backend Logic Developer | Logic and validation development |
+| Alexis | Frontend Developer | Visual design and graphical interface |
+| Karen | Backend Developer | Programming and functional integration |
+
+---
+
+# Scrum Roles
 
 ## Scrum Master
 
-Alberto se encarga de organizar las actividades del equipo, coordinar avances y asegurar el cumplimiento de los sprints.
+Alberto is responsible for organizing team activities, coordinating progress, and ensuring sprint completion.
 
 ## Development Team
 
-Fernanda, Alexis y Karen participan directamente en el desarrollo técnico del sistema.
+Fernanda, Alexis, and Karen directly participate in the technical development of the system.
 
 ## Product Owner
 
-El equipo define conjuntamente los requerimientos funcionales del sistema basándose en las necesidades operativas del restaurante.
+The team collectively defines the system’s functional requirements based on the restaurant’s operational needs.
 
 ---
 
-# Descripción Funcional del Sistema
+# Functional Description of the System
 
-## Página Principal
+## Main Page
 
-La página principal muestra información general del sistema y permite navegar entre las distintas secciones:
+The main page displays general system information and allows navigation between different sections:
 
-* Inicio
-* Reservar
-* Mesas
-* Reservaciones
+* Home
+* Reserve
+* Tables
+* Reservations
 
-También presenta un acceso directo al formulario de reservaciones.
-
----
-
-## Formulario de Reservación
-
-El formulario permite ingresar:
-
-* Nombre completo
-* Correo electrónico
-* Número telefónico
-* Fecha
-* Hora
-* Comentarios especiales
-
-Posteriormente el usuario debe seleccionar una mesa desde el layout visual.
+It also provides direct access to the reservation form.
 
 ---
 
-## Layout de Mesas
+# Reservation Form
 
-El layout representa visualmente la distribución de las mesas del restaurante.
+The form allows users to enter:
 
-Cada mesa muestra:
+* Full name
+* Email address
+* Phone number
+* Date
+* Time
+* Special comments
 
-* Número de mesa
-* Capacidad
-* Estado de disponibilidad
-
-Las mesas cambian dinámicamente dependiendo de la fecha y hora seleccionada.
-
----
-
-# Distribución de Mesas
-
-| Mesa   | Capacidad  |
-| ------ | ---------- |
-| Mesa 1 | 2 personas |
-| Mesa 2 | 4 personas |
-| Mesa 3 | 4 personas |
-| Mesa 4 | 6 personas |
-| Mesa 5 | 6 personas |
-| Mesa 6 | 2 personas |
-| Mesa 7 | 8 personas |
-| Mesa 8 | 4 personas |
+Afterward, the user must select a table from the visual layout.
 
 ---
 
-# Reglas de Negocio
+# Table Layout
 
-## RN-01
+The layout visually represents the restaurant’s table distribution.
 
-El sistema únicamente permitirá reservaciones entre las 10:00 AM y las 10:00 PM.
+Each table displays:
 
-## RN-02
+* Table number
+* Capacity
+* Availability status
 
-No se puede reservar una mesa si ya existe una reservación registrada para la misma fecha y hora.
-
-## RN-03
-
-Una mesa sí puede volver a utilizarse el mismo día si la hora es diferente.
-
-## RN-04
-
-El usuario debe seleccionar obligatoriamente una mesa.
-
-## RN-05
-
-La mesa seleccionada debe respetar la capacidad máxima permitida.
-
-## RN-06
-
-Las mesas cambian dinámicamente de estado según la hora seleccionada.
-
-## RN-07
-
-Todos los campos obligatorios deben completarse antes de confirmar la reservación.
+Tables dynamically change depending on the selected date and time.
 
 ---
 
-# Requerimientos Funcionales
+# Table Distribution
 
-| Código | Requerimiento                                               |
-| ------ | ----------------------------------------------------------- |
-| RF-01  | El sistema debe permitir registrar reservaciones            |
-| RF-02  | El sistema debe validar horarios permitidos                 |
-| RF-03  | El sistema debe mostrar mesas disponibles                   |
-| RF-04  | El sistema debe impedir reservaciones duplicadas            |
-| RF-05  | El sistema debe almacenar reservaciones                     |
-| RF-06  | El sistema debe mostrar reservaciones registradas           |
-| RF-07  | El sistema debe permitir seleccionar mesas desde un layout  |
-| RF-08  | El sistema debe mostrar capacidades de mesas                |
-| RF-09  | El sistema debe validar datos del formulario                |
-| RF-10  | El sistema debe actualizar dinámicamente el estado de mesas |
+| Table | Capacity |
+| ------ | -------- |
+| Table 1 | 2 people |
+| Table 2 | 4 people |
+| Table 3 | 4 people |
+| Table 4 | 6 people |
+| Table 5 | 6 people |
+| Table 6 | 2 people |
+| Table 7 | 8 people |
+| Table 8 | 4 people |
 
 ---
 
-# Requerimientos No Funcionales
+# Business Rules
 
-| Código | Requerimiento                                           |
-| ------ | ------------------------------------------------------- |
-| RNF-01 | El sistema debe tener una interfaz intuitiva            |
-| RNF-02 | El sistema debe responder rápidamente                   |
-| RNF-03 | El sistema debe mantener consistencia visual            |
-| RNF-04 | El sistema debe ser compatible con navegadores modernos |
-| RNF-05 | El sistema debe organizar correctamente la información  |
-| RNF-06 | El sistema debe permitir mantenimiento futuro           |
+## BR-01
 
----
+The system will only allow reservations between 10:00 AM and 10:00 PM.
 
-# Casos de Uso
+## BR-02
 
-## Caso de Uso 1 — Registrar Reservación
+A table cannot be reserved if there is already a reservation registered for the same date and time.
 
-### Actor Principal
+## BR-03
 
-Recepcionista
+A table can be reused on the same day if the reservation time is different.
 
-### Descripción
+## BR-04
 
-Permite registrar una reservación dentro del horario permitido.
+The user must select a table before confirming the reservation.
 
-### Flujo Principal
+## BR-05
 
-1. El recepcionista ingresa al formulario.
-2. Captura los datos del cliente.
-3. Selecciona fecha y hora.
-4. Visualiza las mesas disponibles.
-5. Selecciona una mesa.
-6. El sistema valida disponibilidad.
-7. El sistema guarda la reservación.
-8. Se muestra confirmación.
+The selected table must respect the maximum allowed capacity.
 
-### Flujo Alternativo
+## BR-06
 
-* Si la mesa ya está ocupada, el sistema bloquea la reservación.
-* Si la hora es inválida, el sistema muestra un mensaje de error.
+Tables dynamically change status according to the selected time.
+
+## BR-07
+
+All required fields must be completed before confirming the reservation.
 
 ---
 
-## Caso de Uso 2 — Visualizar Layout
+# Functional Requirements
 
-### Actor Principal
-
-Recepcionista
-
-### Descripción
-
-Permite visualizar la disponibilidad de las mesas.
-
-### Flujo Principal
-
-1. El usuario selecciona fecha y hora.
-2. El sistema consulta reservaciones.
-3. El sistema actualiza el estado de las mesas.
-4. Se muestran mesas disponibles y ocupadas.
+| Code | Requirement |
+| ---- | ----------- |
+| FR-01 | The system must allow reservation registration |
+| FR-02 | The system must validate allowed schedules |
+| FR-03 | The system must display available tables |
+| FR-04 | The system must prevent duplicate reservations |
+| FR-05 | The system must store reservations |
+| FR-06 | The system must display registered reservations |
+| FR-07 | The system must allow table selection from a layout |
+| FR-08 | The system must display table capacities |
+| FR-09 | The system must validate form data |
+| FR-10 | The system must dynamically update table status |
 
 ---
 
-## Caso de Uso 3 — Consultar Reservaciones
+# Non-Functional Requirements
 
-### Actor Principal
-
-Recepcionista
-
-### Descripción
-
-Permite consultar todas las reservaciones registradas.
-
-### Flujo Principal
-
-1. El usuario accede a la sección de reservaciones.
-2. El sistema consulta la información.
-3. Se muestran las reservaciones registradas.
+| Code | Requirement |
+| ---- | ----------- |
+| NFR-01 | The system must have an intuitive interface |
+| NFR-02 | The system must respond quickly |
+| NFR-03 | The system must maintain visual consistency |
+| NFR-04 | The system must be compatible with modern browsers |
+| NFR-05 | The system must organize information correctly |
+| NFR-06 | The system must allow future maintenance |
 
 ---
 
-# Historias de Usuario
+# Use Cases
 
-## Épica 1 — Gestión de Reservaciones
+## Use Case 1 — Register Reservation
 
-### HU-01
+### Main Actor
 
-Como recepcionista
-quiero registrar reservaciones
-para organizar correctamente las mesas del restaurante.
+Receptionist
 
-### Criterios de Aceptación
+### Description
 
-* Debe permitir ingresar datos del cliente.
-* Debe permitir seleccionar fecha y hora.
-* Debe permitir seleccionar mesa.
-* Debe guardar la reservación.
+Allows the registration of a reservation within the allowed schedule.
 
-### Prioridad
+### Main Flow
 
-Alta
+1. The receptionist enters the form.
+2. Enters customer information.
+3. Selects date and time.
+4. Views available tables.
+5. Selects a table.
+6. The system validates availability.
+7. The system stores the reservation.
+8. A confirmation message is displayed.
 
-### Story Points
+### Alternative Flow
+
+* If the table is already occupied, the system blocks the reservation.
+* If the time is invalid, the system displays an error message.
+
+---
+
+## Use Case 2 — View Layout
+
+### Main Actor
+
+Receptionist
+
+### Description
+
+Allows visualization of table availability.
+
+### Main Flow
+
+1. The user selects date and time.
+2. The system checks reservations.
+3. The system updates table statuses.
+4. Available and occupied tables are displayed.
+
+---
+
+## Use Case 3 — View Reservations
+
+### Main Actor
+
+Receptionist
+
+### Description
+
+Allows viewing all registered reservations.
+
+### Main Flow
+
+1. The user accesses the reservations section.
+2. The system retrieves reservation information.
+3. Registered reservations are displayed.
+
+---
+
+# User Stories
+
+## Epic 1 — Reservation Management
+
+### US-01
+
+As a receptionist  
+I want to register reservations  
+so that I can properly organize restaurant tables.
+
+#### Acceptance Criteria
+
+* It must allow entering customer information.
+* It must allow selecting date and time.
+* It must allow selecting a table.
+* It must save the reservation.
+
+#### Priority
+
+High
+
+#### Story Points
 
 8
 
 ---
 
-### HU-02
+### US-02
 
-Como recepcionista
-quiero visualizar mesas disponibles
-para evitar conflictos de reservaciones.
+As a receptionist  
+I want to view available tables  
+so that I can avoid reservation conflicts.
 
-### Criterios de Aceptación
+#### Acceptance Criteria
 
-* Las mesas disponibles deben mostrarse visualmente.
-* Las mesas ocupadas deben bloquearse.
-* El layout debe actualizarse dinámicamente.
+* Available tables must be visually displayed.
+* Occupied tables must be blocked.
+* The layout must update dynamically.
 
-### Prioridad
+#### Priority
 
-Alta
+High
 
-### Story Points
+#### Story Points
 
 8
 
 ---
 
-### HU-03
+### US-03
 
-Como recepcionista
-quiero validar horarios permitidos
-para evitar reservaciones fuera del horario operativo.
+As a receptionist  
+I want to validate allowed schedules  
+so that I can prevent reservations outside operating hours.
 
-### Criterios de Aceptación
+#### Acceptance Criteria
 
-* El sistema debe permitir horarios únicamente entre 10:00 AM y 10:00 PM.
-* Debe mostrar mensajes de error.
-* Debe impedir guardar horarios inválidos.
+* The system must only allow schedules between 10:00 AM and 10:00 PM.
+* It must display error messages.
+* It must prevent saving invalid schedules.
 
-### Prioridad
+#### Priority
 
-Alta
+High
 
-### Story Points
+#### Story Points
 
 5
 
 ---
 
-### HU-04
+### US-04
 
-Como recepcionista
-quiero visualizar las reservaciones registradas
-para consultar información de los clientes.
+As a receptionist  
+I want to view registered reservations  
+so that I can consult customer information.
 
-### Criterios de Aceptación
+#### Acceptance Criteria
 
-* Debe mostrarse una tabla.
-* Debe incluir fecha, hora y mesa.
-* Debe incluir comentarios especiales.
+* A reservation table must be displayed.
+* It must include date, time, and table.
+* It must include special comments.
 
-### Prioridad
+#### Priority
 
-Media
+Medium
 
-### Story Points
+#### Story Points
 
 5
 
 ---
 
-### HU-05
+### US-05
 
-Como recepcionista
-quiero impedir reservaciones duplicadas
-para evitar conflictos entre clientes.
+As a receptionist  
+I want to prevent duplicate reservations  
+so that I can avoid conflicts between customers.
 
-### Criterios de Aceptación
+#### Acceptance Criteria
 
-* No debe permitirse repetir mesa, fecha y hora.
-* Debe mostrarse una alerta de conflicto.
-* El sistema debe validar automáticamente.
+* Repeating the same table, date, and time must not be allowed.
+* A conflict alert must be displayed.
+* The system must validate automatically.
 
-### Prioridad
+#### Priority
 
-Alta
+High
 
-### Story Points
-
-8
-
----
-
-## Épica 2 — Interfaz y Experiencia Visual
-
-### HU-06
-
-Como recepcionista
-quiero una interfaz visual organizada
-para utilizar el sistema fácilmente.
-
-### Criterios de Aceptación
-
-* Debe existir menú de navegación.
-* Debe existir diseño consistente.
-* Debe tener buena legibilidad.
-
-### Prioridad
-
-Media
-
-### Story Points
-
-3
-
----
-
-### HU-07
-
-Como recepcionista
-quiero seleccionar mesas desde un layout visual
-para identificar rápidamente capacidades y disponibilidad.
-
-### Criterios de Aceptación
-
-* Cada mesa debe mostrar capacidad.
-* Las mesas deben ser seleccionables.
-* Deben existir cambios visuales de estado.
-
-### Prioridad
-
-Alta
-
-### Story Points
+#### Story Points
 
 8
 
 ---
 
-### HU-08
+## Epic 2 — Interface and Visual Experience
 
-Como recepcionista
-quiero visualizar mensajes de validación
-para conocer errores durante el registro.
+### US-06
 
-### Criterios de Aceptación
+As a receptionist  
+I want an organized visual interface  
+so that I can use the system easily.
 
-* Deben mostrarse alertas.
-* Deben mostrarse errores claros.
-* Debe indicarse la causa del problema.
+#### Acceptance Criteria
 
-### Prioridad
+* A navigation menu must exist.
+* The design must be consistent.
+* The interface must have good readability.
 
-Media
+#### Priority
 
-### Story Points
+Medium
+
+#### Story Points
 
 3
 
 ---
 
-## Épica 3 — Persistencia y Base de Datos
+### US-07
 
-### HU-09
+As a receptionist  
+I want to select tables from a visual layout  
+so that I can quickly identify capacities and availability.
 
-Como desarrollador
-quiero conectar el sistema a MySQL
-para almacenar reservaciones permanentemente.
+#### Acceptance Criteria
 
-### Criterios de Aceptación
+* Each table must display capacity.
+* Tables must be selectable.
+* Visual state changes must exist.
 
-* Debe existir conexión funcional.
-* Deben almacenarse reservaciones.
-* Deben consultarse datos guardados.
+#### Priority
 
-### Prioridad
+High
 
-Alta
+#### Story Points
 
-### Story Points
+8
+
+---
+
+### US-08
+
+As a receptionist  
+I want to view validation messages  
+so that I can identify errors during registration.
+
+#### Acceptance Criteria
+
+* Alerts must be displayed.
+* Clear error messages must appear.
+* The cause of the problem must be indicated.
+
+#### Priority
+
+Medium
+
+#### Story Points
+
+3
+
+---
+
+## Epic 3 — Persistence and Database
+
+### US-09
+
+As a developer  
+I want to connect the system to MySQL  
+so that reservations can be stored permanently.
+
+#### Acceptance Criteria
+
+* A functional connection must exist.
+* Reservations must be stored.
+* Saved data must be retrievable.
+
+#### Priority
+
+High
+
+#### Story Points
 
 13
 
 ---
 
-### HU-10
+### US-10
 
-Como desarrollador
-quiero estructurar correctamente la base de datos
-para mantener integridad de información.
+As a developer  
+I want to properly structure the database  
+so that information integrity can be maintained.
 
-### Criterios de Aceptación
+#### Acceptance Criteria
 
-* Deben existir tablas normalizadas.
-* Deben existir relaciones.
-* Debe existir integridad de datos.
+* Normalized tables must exist.
+* Relationships must exist.
+* Data integrity must be maintained.
 
-### Prioridad
+#### Priority
 
-Alta
+High
 
-### Story Points
+#### Story Points
 
 8
 
@@ -547,135 +547,135 @@ Alta
 
 # Product Backlog
 
-| ID    | Historia                             | Prioridad | Story Points | Estado     |
-| ----- | ------------------------------------ | --------- | ------------ | ---------- |
-| HU-01 | Registrar reservaciones              | Alta      | 8            | Completado |
-| HU-02 | Visualizar mesas disponibles         | Alta      | 8            | Completado |
-| HU-03 | Validar horarios permitidos          | Alta      | 5            | Completado |
-| HU-04 | Visualizar reservaciones registradas | Media     | 5            | Completado |
-| HU-05 | Impedir reservaciones duplicadas     | Alta      | 8            | Completado |
-| HU-06 | Interfaz organizada                  | Media     | 3            | Completado |
-| HU-07 | Layout visual interactivo            | Alta      | 8            | Completado |
-| HU-08 | Mensajes de validación               | Media     | 3            | Completado |
-| HU-09 | Conexión MySQL                       | Alta      | 13           | Pendiente  |
-| HU-10 | Estructura de base de datos          | Alta      | 8            | Pendiente  |
+| ID | Story | Priority | Story Points | Status |
+| --- | --- | --- | --- | --- |
+| US-01 | Register reservations | High | 8 | Completed |
+| US-02 | View available tables | High | 8 | Completed |
+| US-03 | Validate allowed schedules | High | 5 | Completed |
+| US-04 | View registered reservations | Medium | 5 | Completed |
+| US-05 | Prevent duplicate reservations | High | 8 | Completed |
+| US-06 | Organized interface | Medium | 3 | Completed |
+| US-07 | Interactive visual layout | High | 8 | Completed |
+| US-08 | Validation messages | Medium | 3 | Completed |
+| US-09 | MySQL connection | High | 13 | Pending |
+| US-10 | Database structure | High | 8 | Pending |
 
 ---
 
 # Sprint Planning
 
-# Sprint 1
+## Sprint 1
 
-## Objetivo
+### Objective
 
-Diseñar la estructura visual inicial del sistema.
+Design the initial visual structure of the system.
 
-## Actividades
+### Activities
 
-* Diseño de interfaz.
-* Navbar principal.
-* Página de inicio.
-* Diseño general.
+* Interface design
+* Main navbar
+* Home page
+* General design
 
-## Historias Incluidas
+### Included Stories
 
-* HU-06
+* US-06
 
-## Responsable Principal
+### Main Responsible
 
 Alexis
 
 ---
 
-# Sprint 2
+## Sprint 2
 
-## Objetivo
+### Objective
 
-Desarrollar formulario de reservaciones.
+Develop the reservation form.
 
-## Actividades
+### Activities
 
-* Campos del formulario.
-* Validaciones básicas.
-* Diseño responsivo.
+* Form fields
+* Basic validations
+* Responsive design
 
-## Historias Incluidas
+### Included Stories
 
-* HU-01
-* HU-03
-* HU-08
+* US-01
+* US-03
+* US-08
 
-## Responsable Principal
+### Main Responsible
 
 Karen
 
 ---
 
-# Sprint 3
+## Sprint 3
 
-## Objetivo
+### Objective
 
-Implementar layout visual interactivo.
+Implement the interactive visual layout.
 
-## Actividades
+### Activities
 
-* Diseño de mesas.
-* Capacidades.
-* Selección visual.
-* Estados dinámicos.
+* Table design
+* Capacities
+* Visual selection
+* Dynamic states
 
-## Historias Incluidas
+### Included Stories
 
-* HU-02
-* HU-07
+* US-02
+* US-07
 
-## Responsable Principal
+### Main Responsible
 
 Alexis
 
 ---
 
-# Sprint 4
+## Sprint 4
 
-## Objetivo
+### Objective
 
-Implementar lógica de validación.
+Implement validation logic.
 
-## Actividades
+### Activities
 
-* Validación de conflictos.
-* Restricción de horarios.
-* Bloqueo de mesas ocupadas.
+* Conflict validation
+* Schedule restrictions
+* Blocking occupied tables
 
-## Historias Incluidas
+### Included Stories
 
-* HU-05
+* US-05
 
-## Responsable Principal
+### Main Responsible
 
 Fernanda
 
 ---
 
-# Sprint 5
+## Sprint 5
 
-## Objetivo
+### Objective
 
-Conectar sistema con base de datos.
+Connect the system to the database.
 
-## Actividades
+### Activities
 
-* Conexión MySQL.
-* Consultas SQL.
-* Guardado permanente.
-* Consulta de reservaciones.
+* MySQL connection
+* SQL queries
+* Permanent storage
+* Reservation queries
 
-## Historias Incluidas
+### Included Stories
 
-* HU-09
-* HU-10
+* US-09
+* US-10
 
-## Responsable Principal
+### Main Responsible
 
 Karen
 
@@ -683,38 +683,38 @@ Karen
 
 # Sprint Backlog
 
-| Sprint   | Actividad                | Responsable | Estado     |
-| -------- | ------------------------ | ----------- | ---------- |
-| Sprint 1 | Diseño UI                | Alexis      | Completado |
-| Sprint 1 | Navbar                   | Alexis      | Completado |
-| Sprint 1 | Página principal         | Alexis      | Completado |
-| Sprint 2 | Formulario reservaciones | Karen       | Completado |
-| Sprint 2 | Validación de horarios   | Fernanda    | Completado |
-| Sprint 2 | Mensajes de error        | Fernanda    | Completado |
-| Sprint 3 | Layout de mesas          | Alexis      | Completado |
-| Sprint 3 | Estados dinámicos        | Fernanda    | Completado |
-| Sprint 3 | Capacidades              | Alexis      | Completado |
-| Sprint 4 | Validación conflictos    | Fernanda    | Completado |
-| Sprint 4 | Restricción de horarios  | Fernanda    | Completado |
-| Sprint 5 | Conexión MySQL           | Karen       | Pendiente  |
-| Sprint 5 | Consultas SQL            | Karen       | Pendiente  |
-| Sprint 5 | Persistencia de datos    | Karen       | Pendiente  |
+| Sprint | Activity | Responsible | Status |
+| ------ | -------- | ----------- | ------ |
+| Sprint 1 | UI Design | Alexis | Completed |
+| Sprint 1 | Navbar | Alexis | Completed |
+| Sprint 1 | Main Page | Alexis | Completed |
+| Sprint 2 | Reservation Form | Karen | Completed |
+| Sprint 2 | Schedule Validation | Fernanda | Completed |
+| Sprint 2 | Error Messages | Fernanda | Completed |
+| Sprint 3 | Table Layout | Alexis | Completed |
+| Sprint 3 | Dynamic States | Fernanda | Completed |
+| Sprint 3 | Capacities | Alexis | Completed |
+| Sprint 4 | Conflict Validation | Fernanda | Completed |
+| Sprint 4 | Schedule Restrictions | Fernanda | Completed |
+| Sprint 5 | MySQL Connection | Karen | Pending |
+| Sprint 5 | SQL Queries | Karen | Pending |
+| Sprint 5 | Data Persistence | Karen | Pending |
 
 ---
 
-# Riesgos del Proyecto
+# Project Risks
 
-| Riesgo                      | Impacto | Solución                       |
-| --------------------------- | ------- | ------------------------------ |
-| Conflictos de reservaciones | Alto    | Validaciones automáticas       |
-| Errores en horarios         | Alto    | Restricción horaria            |
-| Pérdida de datos            | Alto    | Uso de MySQL                   |
-| Errores visuales            | Medio   | Pruebas de interfaz            |
-| Problemas de integración    | Medio   | Control de versiones en GitHub |
+| Risk | Impact | Solution |
+| ---- | ------ | -------- |
+| Reservation conflicts | High | Automatic validations |
+| Schedule errors | High | Schedule restrictions |
+| Data loss | High | MySQL usage |
+| Visual errors | Medium | Interface testing |
+| Integration problems | Medium | Version control with GitHub |
 
 ---
 
-# Arquitectura General
+# General Architecture
 
 ## Frontend
 
@@ -726,57 +726,57 @@ Karen
 
 * PHP
 
-## Base de Datos
+## Database
 
 * MySQL
 
 ---
 
-# Definición de Ready
+# Definition of Ready
 
-Una historia de usuario estará lista para desarrollarse cuando:
+A user story will be ready for development when:
 
-* Esté correctamente definida.
-* Tenga criterios de aceptación.
-* Tenga prioridad asignada.
-* El equipo comprenda su objetivo.
-* Existan tareas identificadas.
-
----
-
-# Definición de Done
-
-Una funcionalidad se considerará terminada cuando:
-
-* El código funcione correctamente.
-* Existan validaciones completas.
-* No existan errores críticos.
-* La interfaz funcione correctamente.
-* La funcionalidad sea demostrable.
-* El equipo apruebe el resultado.
+* It is clearly defined.
+* It has acceptance criteria.
+* It has assigned priority.
+* The team understands its objective.
+* Tasks have been identified.
 
 ---
 
-# Flujo General del Sistema
+# Definition of Done
 
-1. El recepcionista accede al sistema.
-2. Ingresa al apartado de reservaciones.
-3. Captura información del cliente.
-4. Selecciona fecha.
-5. Selecciona hora.
-6. El sistema valida horario permitido.
-7. El sistema actualiza el layout.
-8. El usuario selecciona una mesa.
-9. El sistema valida disponibilidad.
-10. La reservación se guarda.
-11. La información aparece en reservaciones registradas.
+A feature will be considered completed when:
+
+* The code works correctly.
+* All validations are implemented.
+* There are no critical errors.
+* The interface works correctly.
+* The feature can be demonstrated.
+* The team approves the result.
 
 ---
 
-# Conclusión
+# General System Flow
 
-El sistema Mochi House Reservation System fue diseñado para optimizar la administración de reservaciones dentro de un restaurante mediante un control dinámico de disponibilidad de mesas.
+1. The receptionist accesses the system.
+2. Enters the reservation section.
+3. Captures customer information.
+4. Selects a date.
+5. Selects a time.
+6. The system validates the allowed schedule.
+7. The system updates the layout.
+8. The user selects a table.
+9. The system validates availability.
+10. The reservation is stored.
+11. The information appears in the reservations section.
 
-La implementación de validaciones automáticas, selección visual de mesas y control de conflictos permite mejorar la organización operativa y evitar errores comunes en la gestión manual de reservaciones.
+---
 
-El uso de metodologías Scrum permitió organizar correctamente el desarrollo del proyecto mediante sprints, historias de usuario y distribución clara de responsabilidades entre los integrantes del equipo.
+# Conclusion
+
+The Mochi House Reservation System was designed to optimize reservation management within a restaurant through dynamic table availability control.
+
+The implementation of automatic validations, visual table selection, and conflict control improves operational organization and helps prevent common errors in manual reservation management.
+
+The use of Scrum methodologies allowed the project to be properly organized through sprints, user stories, and clear responsibility distribution among team members.
