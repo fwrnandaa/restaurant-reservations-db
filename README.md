@@ -28,7 +28,7 @@
 
 ---
 
-# 📌 About the Project
+#  About the Project
 
 Mochi House Reservation System was developed to improve restaurant organization by providing a digital solution for reservation management.
 
@@ -40,7 +40,7 @@ The project was developed as part of a relational database and web development a
 
 ---
 
-# ✨ Features
+#  Features
 
 - Interactive restaurant table layout
 - Reservation registration system
@@ -55,7 +55,7 @@ The project was developed as part of a relational database and web development a
 
 ---
 
-# 🛠️ Technologies
+# Technologies
 
 ## Frontend
 - HTML5
@@ -77,7 +77,7 @@ The project was developed as part of a relational database and web development a
 
 ---
 
-# ⚡ Installation
+#  Installation
 
 ## Prerequisites
 
@@ -142,7 +142,7 @@ http://localhost/mochi_house
 
 ---
 
-# 💻 System Usage
+#  System Usage
 
 The system allows restaurant staff to manage reservations efficiently through a visual interface.
 
@@ -180,7 +180,7 @@ The project uses a relational database model developed in MySQL.
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```txt
 MochiHouse/
@@ -216,7 +216,7 @@ MochiHouse/
 
 ---
 
-# 🎨 Interface Design
+#  Interface Design
 
 The visual identity of Mochi House was inspired by soft pastel colors and Japanese kawaii aesthetics.
 
@@ -235,7 +235,7 @@ The interface prototypes were initially designed in Figma before implementation.
 
 ---
 
-# 🔒 Reservation Validation Logic
+#  Reservation Validation Logic
 
 One of the most important features of the system is the reservation validation process.
 
@@ -253,7 +253,7 @@ This logic helps maintain proper restaurant organization and availability contro
 
 ---
 
-# 🚀 Future Improvements
+#  Future Improvements
 
 Possible future updates include:
 
@@ -269,7 +269,7 @@ Possible future updates include:
 
 ---
 
-# 👨‍💻 Authors
+#  Authors
 
 - Fernanda Martinez Martinez
 - Karen Yazbeth Rivera Aguirre
@@ -278,7 +278,7 @@ Possible future updates include:
 
 ---
 
-# 📄 License
+#  License
 
 This project was developed for academic and educational purposes only.
 
