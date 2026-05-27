@@ -1,4 +1,4 @@
-# 🍡 Product Backlog — Mochi House Reservation System
+# Product Backlog — Mochi House Reservation System
 
 ## Product Goal
 
