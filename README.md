@@ -1,4 +1,4 @@
-# 🍡 Mochi House Reservation System
+#  Mochi House Reservation System
 
 ![Status](https://img.shields.io/badge/status-development-ff69b4)
 ![Frontend](https://img.shields.io/badge/frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-f8c8dc)
