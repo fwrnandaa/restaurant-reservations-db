@@ -80,9 +80,9 @@ Complete the integration between the frontend and database while improving reser
 
 | ID | Task | Related User Story | Detailed Description | Priority | Hours | Status |
 |---|---|---|---|---|---|---|
-| SB3-03 | Validate Reservation Availability | User Story 1 | Implement validation rules to prevent duplicate reservations for the same table, date, and time. | High | 2h | 🔄 In Progress |
-| SB3-08 | Prepare SQL Inserts | User Story 2 | Create sample inserts for customers, tables, and reservations. | Medium | 2h | 🔄 In Progress |
-| SB3-09 | Develop Basic SQL Queries | User Story 3 | Implement SQL queries for testing reservation management functionality. | Medium | 2h | ⏳ Pending |
+| SB3-03 | Validate Reservation Availability | User Story 1 | Implement validation rules to prevent duplicate reservations for the same table, date, and time. | High | 6h | 🔄 In Progress |
+| SB3-08 | Prepare SQL Inserts | User Story 2 | Create sample inserts for customers, tables, and reservations. | Medium | 4h | 🔄 In Progress |
+| SB3-09 | Develop Basic SQL Queries | User Story 3 | Implement SQL queries for testing reservation management functionality. | Medium | 6h | ⏳ Pending |
 
 ---
 
@@ -92,7 +92,10 @@ Complete the integration between the frontend and database while improving reser
 
 | Day | Hours Worked | Activities |
 |---|---|---|
-| Thursday | 2h | Reservation validation logic |
+| Monday | 2h | Reservation validation planning and database review |
+| Wednesday | 2h | Reservation conflict validation development |
+| Thursday | 2h | Validation testing and error handling |
+| Friday | 2h | SQL inserts preparation and testing |
 
 ---
 
@@ -100,8 +103,10 @@ Complete the integration between the frontend and database while improving reser
 
 | Day | Hours Worked | Activities |
 |---|---|---|
-| Thursday | 2h | SQL inserts and database testing |
-| Friday | 2h | SQL queries and reservation management testing |
+| Monday | 2h | SQL inserts improvements |
+| Wednesday | 2h | Development of reservation management queries |
+| Thursday | 2h | SQL query testing and optimization |
+| Friday | 2h | Final database testing and sprint review |
 
 ---
 
@@ -109,9 +114,9 @@ Complete the integration between the frontend and database while improving reser
 
 | Description | Hours |
 |---|---|
-| Total Working Days | 3 Days |
+| Total Working Days | 8 Days |
 | Hours Per Day | 2h |
-| Total Sprint Hours | 6h |
+| Total Sprint Hours | 16h |
 
 ---
 
@@ -151,3 +156,4 @@ A task is considered completed when:
 
 ---
 ```
+
