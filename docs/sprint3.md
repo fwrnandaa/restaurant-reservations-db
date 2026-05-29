@@ -1,87 +1,153 @@
+```md
+# 🍡 Sprint Backlog — Mochi House Reservation System
 
-#  Sprint Backlog — Mochi House Reservation System
-
-## Sprint 3
-
----
-
-#  Sprint Goal
-
-Complete the integration between the frontend and database while improving reservation management features, repository organization, documentation, and reservation validation to ensure the system operates correctly and avoids table conflicts.
+# Sprint 3
 
 ---
 
-#  Sprint Information
+# 🎯 Sprint Goal
+
+Complete the integration between the frontend and database while improving reservation validation and database testing features to ensure the reservation system works correctly and prevents table conflicts.
+
+---
+
+# 📌 Sprint Information
 
 | Element | Description |
 |---|---|
 | Sprint Name | Sprint 3 |
-| Duration | 2 Weeks |
+| Sprint Duration | 2 Weeks |
 | Project | Mochi House Reservation System |
 | Team | Mochi House Development Team |
-| Sprint Objective | Improve reservation functionality and complete core system integration |
+| Sprint Objective | Improve reservation validation and complete pending database functionality |
 
 ---
 
-#  Sprint Backlog
-
-| ID | Task | Detailed Description | Priority | Status |
-|---|---|---|---|---|
-| SB3-01 | Connect Frontend with MySQL | Finalize the connection between HTML forms and the MySQL database using PHP to allow reservation data storage. | High | ✅ Completed |
-| SB3-02 | Implement Reservation Registration | Develop the backend logic that inserts reservation data into the database after receiving form information. | High | ✅ Completed |
-| SB3-03 | Validate Reservation Availability | Implement validation rules to prevent duplicate reservations for the same table, date, and time. | High | 🔄 In Progress |
-| SB3-04 | Improve Reservation Form Interface | Refine the reservation form design and improve input organization for better usability. | Medium | ✅ Completed |
-| SB3-05 | Add Restaurant Visual Design | Integrate custom CSS styling, background images, and visual assets to match the Mochi House theme. | Medium | ✅ Completed |
-| SB3-06 | Organize GitHub Repository Structure | Separate project files into folders such as database, images, documentation, and frontend resources. | Medium | ✅ Completed |
-| SB3-07 | Create README Documentation | Update and improve `README.md` with project description, installation instructions, technologies, and repository structure. | Medium | ✅ Completed |
-| SB3-08 | Prepare SQL Inserts | Create sample insert statements for testing customers, tables, and reservations inside `inserts.sql`. | Medium | 🔄 In Progress |
-| SB3-09 | Develop Basic SQL Queries | Implement initial SQL queries required for reservation management and database testing. | Medium | ⏳ Pending |
-| SB3-10 | Update Product Backlog | Refine the product backlog to ensure user stories and epics align with current project progress. | Medium | ✅ Completed |
+# 📖 User Stories Included in Sprint 3
 
 ---
 
-#  Sprint Deliverables
+## EPIC 1 — Reservation Management
 
-The following deliverables were completed during Sprint 3:
+### User Story 1 — Validate Reservation Availability
 
-- Functional reservation registration system
-- Frontend connected with MySQL database
-- Initial reservation validation logic
-- Improved restaurant-themed interface
-- Organized GitHub repository structure
-- Updated project documentation
-- SQL testing data and scripts
+**As a** receptionist  
+**I want** the system to validate reservation availability  
+**So that** duplicate reservations for the same table and schedule are avoided.
+
+### Acceptance Criteria
+
+- Existing reservations are checked
+- Duplicate reservations are blocked
+- Conflict messages are displayed
+- Validation works before insertion
 
 ---
 
-#  Technologies Used
+## EPIC 2 — Database and Backend Integration
+
+### User Story 2 — Prepare SQL Inserts
+
+**As a** developer  
+**I want** sample SQL inserts  
+**So that** the database can be tested efficiently.
+
+### Acceptance Criteria
+
+- Sample customers exist
+- Reservation test data is available
+- Inserts execute correctly
+- SQL scripts are organized
+
+---
+
+### User Story 3 — Develop SQL Queries
+
+**As a** developer  
+**I want** basic SQL queries for reservation management  
+**So that** reservation information can be verified and tested.
+
+### Acceptance Criteria
+
+- SELECT queries retrieve reservations
+- Queries execute correctly
+- Database tests return valid data
+- Queries are documented properly
+
+---
+
+# 📋 Sprint Backlog
+
+| ID | Task | Related User Story | Detailed Description | Priority | Hours | Status |
+|---|---|---|---|---|---|---|
+| SB3-03 | Validate Reservation Availability | User Story 1 | Implement validation rules to prevent duplicate reservations for the same table, date, and time. | High | 2h | 🔄 In Progress |
+| SB3-08 | Prepare SQL Inserts | User Story 2 | Create sample inserts for customers, tables, and reservations. | Medium | 2h | 🔄 In Progress |
+| SB3-09 | Develop Basic SQL Queries | User Story 3 | Implement SQL queries for testing reservation management functionality. | Medium | 2h | ⏳ Pending |
+
+---
+
+# ⏱️ Sprint Work Schedule
+
+## Week 1
+
+| Day | Hours Worked | Activities |
+|---|---|---|
+| Thursday | 2h | Reservation validation logic |
+
+---
+
+## Week 2
+
+| Day | Hours Worked | Activities |
+|---|---|---|
+| Thursday | 2h | SQL inserts and database testing |
+| Friday | 2h | SQL queries and reservation management testing |
+
+---
+
+# 🕒 Total Sprint Hours
+
+| Description | Hours |
+|---|---|
+| Total Working Days | 3 Days |
+| Hours Per Day | 2h |
+| Total Sprint Hours | 6h |
+
+---
+
+# 📦 Sprint Deliverables
+
+Pending deliverables for Sprint 3:
+
+- Reservation validation system
+- SQL testing inserts
+- Reservation management SQL queries
+- Database testing scripts
+
+---
+
+# 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Frontend structure |
-| CSS3 | Visual design and styling |
-| JavaScript | Client-side interaction |
-| PHP | Backend processing |
+| PHP | Backend validation |
 | MySQL | Database management |
-| XAMPP | Local development server |
-| GitHub | Repository and version control |
+| SQL | Database queries and inserts |
+| XAMPP | Local development environment |
+| GitHub | Version control |
 
 ---
 
-#  Definition of Done
+# ✅ Definition of Done
 
 A task is considered completed when:
 
-- The implemented functionality works correctly
+- Functionality works correctly
 - Database operations execute without errors
-- The feature is tested locally using XAMPP
-- Project files are organized properly
-- Documentation is updated if necessary
-- Reservation conflicts are correctly validated
+- Reservation conflicts are validated correctly
+- SQL scripts execute successfully
+- Features are tested locally using XAMPP
+- Code is uploaded to GitHub repository
 
 ---
-
-#  Sprint Review
-
-During Sprint 3, the team focused on improving the integration between the frontend and database components of the Mochi House Reservation System. Reservation registration and MySQL connectivity were successfully implemented, while reservation conflict validation remains under development. Documentation, repository organization, and interface design were also significantly improved.
 ```
