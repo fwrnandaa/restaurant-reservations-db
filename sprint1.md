@@ -1,158 +1,174 @@
-# 🍡 Sprint Backlog — Mochi House Reservation System
+# 🍡 MOCHI HOUSE – SPRINT 1
 
-# Sprint 1
+## User Authentication, Database Setup, and Initial Interface
 
----
+### Duration
+4 Weeks
 
-# 🎯 Sprint Goal
-
-Establish the project foundation by creating the database structure, project environment, and basic user interfaces required for the reservation system.
-
----
-
-# 📌 Sprint Information
-
-| Element | Description |
-|---|---|
-| Sprint Name | Sprint 1 |
-| Sprint Duration | 2 Weeks |
-| Project | Mochi House Reservation System |
-| Team | Mochi House Development Team |
-| Sprint Objective | Create the initial architecture, database design, and core user interfaces |
+### Total Estimated Hours
+84 Hours
 
 ---
 
-# 📖 User Stories Included in Sprint 1
+# User Story US-MH-01-01
 
----
+## User Registration
 
-## EPIC 1 — System Setup
+**As a customer,**
 
-### User Story 1 — Configure Development Environment
+I want to create an account using my personal information,
 
-**As a** developer  
-**I want** a configured development environment  
-**So that** the team can start building the system efficiently.
+**So that** I can access the reservation system.
+
+### Related Tasks
+
+| ID | Task | Responsible | Description | Hours |
+|------|------|------|------|------|
+| T-01 | Development Environment Setup | Scrum Team | Configure Node.js, MongoDB, Git and dependencies | 4 |
+| T-02 | Backend Initialization | Backend Developer | Create Express.js project structure | 5 |
+| T-03 | MongoDB Configuration | Database Administrator | Configure MongoDB Atlas connection | 4 |
+| T-04 | User Collection Design | Database Administrator | Create user schema and validations | 5 |
+| T-05 | Registration API Development | Backend Developer | Create user registration endpoint | 6 |
+| T-06 | Password Encryption | Backend Developer | Implement bcrypt password hashing | 4 |
+| T-07 | Registration Form Development | Frontend Developer | Create registration interface | 6 |
+
+### Total
+
+34 Hours
 
 ### Acceptance Criteria
 
-- XAMPP is installed and configured
-- Project structure is created
-- GitHub repository is configured
-- Database connection is prepared
+```gherkin
+Feature: User Registration
+
+Scenario: Successful registration
+Given the user is on the registration page
+When the user enters valid information
+And submits the form
+Then the account should be created successfully
+
+Scenario: Duplicate email
+Given an existing account uses the same email
+When the user submits the registration form
+Then the system should display an error message
+
+Scenario: Required fields validation
+Given the registration form is incomplete
+When the user submits the form
+Then the system should prevent registration
+```
 
 ---
 
-## EPIC 2 — Database Design
+# User Story US-MH-01-02
 
-### User Story 2 — Create Database Structure
+## User Login
 
-**As a** developer  
-**I want** the database schema created  
-**So that** reservation information can be stored properly.
+**As a registered customer,**
+
+I want to securely log into my account,
+
+**So that** I can manage my reservations.
+
+### Related Tasks
+
+| ID | Task | Responsible | Description | Hours |
+|------|------|------|------|------|
+| T-08 | Login API Development | Backend Developer | Create authentication endpoints | 6 |
+| T-09 | Session Management | Backend Developer | Configure JWT authentication | 5 |
+| T-10 | Login Interface Development | Frontend Developer | Create login form | 5 |
+| T-11 | Authentication Testing | QA Tester | Validate login functionality | 4 |
+
+### Total
+
+20 Hours
 
 ### Acceptance Criteria
 
-- Customer table exists
-- Reservation table exists
-- Tables table exists
-- Primary and foreign keys are configured
+```gherkin
+Feature: User Login
+
+Scenario: Successful login
+Given the user has a valid account
+When the user enters valid credentials
+Then the system should grant access
+
+Scenario: Invalid credentials
+Given the user enters incorrect credentials
+When the login form is submitted
+Then an error message should be displayed
+
+Scenario: Protected routes
+Given the user is not authenticated
+When attempting to access protected pages
+Then access should be denied
+```
 
 ---
 
-## EPIC 3 — User Interface Design
+# User Story US-MH-01-03
 
-### User Story 3 — Create Main Interface
+## Initial Dashboard
 
-**As a** customer  
-**I want** an easy-to-use interface  
-**So that** I can navigate the reservation system.
+**As a logged-in customer,**
+
+I want to view the main dashboard,
+
+**So that** I can navigate through the system.
+
+### Related Tasks
+
+| ID | Task | Responsible | Description | Hours |
+|------|------|------|------|------|
+| T-12 | Dashboard Design | UI Designer | Create dashboard layout | 5 |
+| T-13 | Navigation Menu | Frontend Developer | Implement navigation structure | 5 |
+| T-14 | Dashboard Development | Frontend Developer | Build dashboard interface | 8 |
+| T-15 | Interface Testing | QA Tester | Validate navigation and responsiveness | 4 |
+
+### Total
+
+22 Hours
 
 ### Acceptance Criteria
 
-- Main page is created
-- Navigation menu is available
-- Responsive layout is implemented
-- Interface follows project design
+```gherkin
+Feature: Dashboard Access
+
+Scenario: Dashboard display
+Given the user is authenticated
+When the dashboard loads
+Then the main options should be visible
+
+Scenario: Navigation menu
+Given the dashboard is displayed
+When the user selects a menu option
+Then the corresponding page should open
+```
 
 ---
 
-# 📋 Sprint Backlog
+# Weekly Planning
 
-| ID | Task | Related User Story | Detailed Description | Priority | Hours | Status |
-|---|---|---|---|---|---|---|
-| SB1-01 | Configure Development Environment | User Story 1 | Install and configure XAMPP, GitHub repository, and project folders. | High | 4h | ✅ Completed |
-| SB1-02 | Create Database Schema | User Story 2 | Design and create customer, reservation, and table database structures. | High | 6h | ✅ Completed |
-| SB1-03 | Configure Database Connection | User Story 2 | Create PHP connection file and verify database access. | High | 2h | ✅ Completed |
-| SB1-04 | Design Main Interface | User Story 3 | Create homepage layout and navigation structure. | Medium | 4h | ✅ Completed |
+| Week | Activities Completed | Hours |
+|--------|--------|--------|
+| Week 1 | T-01, T-02, T-03, T-04 | 18 |
+| Week 2 | T-05, T-06, T-07 | 16 |
+| Week 3 | T-08, T-09, T-10, T-11 | 20 |
+| Week 4 | T-12, T-13, T-14, T-15 | 30 |
 
----
+## Sprint Total
 
-# ⏱️ Sprint Work Schedule
-
-## Week 1
-
-| Day | Hours Worked | Activities |
-|---|---|---|
-| Monday | 2h | Project setup and repository configuration |
-| Wednesday | 2h | Development environment configuration |
-| Thursday | 2h | Database design planning |
-| Friday | 2h | Creation of database tables |
+84 Hours
 
 ---
 
-## Week 2
+# Definition of Done
 
-| Day | Hours Worked | Activities |
-|---|---|---|
-| Monday | 2h | Database relationship implementation |
-| Wednesday | 2h | Database connection development |
-| Thursday | 2h | Main interface design |
-| Friday | 2h | Interface testing and sprint review |
-
----
-
-# 🕒 Total Sprint Hours
-
-| Description | Hours |
-|---|---|
-| Total Working Days | 8 Days |
-| Hours Per Day | 2h |
-| Total Sprint Hours | 16h |
-
----
-
-# 📦 Sprint Deliverables
-
-- Project repository
-- Database schema
-- Database connection
-- Initial website structure
-- Main user interface
-
----
-
-# 🛠️ Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| HTML | Interface structure |
-| CSS | User interface styling |
-| PHP | Backend foundation |
-| MySQL | Database management |
-| XAMPP | Local development environment |
-| GitHub | Version control |
-
----
-
-# ✅ Definition of Done
-
-A task is considered completed when:
-
-- Database structure exists
-- Project runs locally
-- Database connection works correctly
-- Interface loads without errors
-- Code is uploaded to GitHub
-
----
+- [x] MongoDB connected
+- [x] User collection created
+- [x] Registration working
+- [x] Login working
+- [x] JWT authentication implemented
+- [x] Dashboard accessible
+- [x] Functional tests completed
+- [x] No critical bugs detected
