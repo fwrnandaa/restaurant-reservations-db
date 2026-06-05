@@ -31,13 +31,17 @@ El sistema permitirá a los usuarios:
 
 ### Tecnologías Utilizadas
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Express.js
-- MySQL
-
+| Tecnología | Versión |
+|------------|----------|
+| HTML | HTML5 |
+| CSS | CSS3 |
+| JavaScript | ECMAScript 2023 |
+| Node.js | v22.16.0 |
+| Express.js | v5.1.0 |
+| MySQL | v8.0 |
+| Git | v2.49 |
+| GitHub | Plataforma Web |
+| Visual Studio Code | v1.100 |
 ---
 
 ## 1.3 Audiencia Objetivo
@@ -133,13 +137,6 @@ El sistema deberá:
 
 El sistema permitirá que nuevos usuarios creen una cuenta.
 
-### Criterios de Aceptación
-
-- El usuario captura sus datos.
-- Los datos son validados.
-- La cuenta se almacena correctamente.
-- No se permiten cuentas duplicadas.
-
 ---
 
 ## FR-02 Inicio de Sesión
@@ -147,12 +144,6 @@ El sistema permitirá que nuevos usuarios creen una cuenta.
 ### Descripción
 
 El sistema permitirá autenticar usuarios registrados.
-
-### Criterios de Aceptación
-
-- El usuario introduce credenciales válidas.
-- El acceso es concedido cuando las credenciales son correctas.
-- Se muestra un mensaje de error cuando son incorrectas.
 
 ---
 
@@ -162,14 +153,6 @@ El sistema permitirá autenticar usuarios registrados.
 
 El sistema permitirá a los clientes crear reservaciones.
 
-### Criterios de Aceptación
-
-- El usuario selecciona una fecha.
-- El usuario selecciona un horario disponible.
-- El usuario indica el número de personas.
-- El sistema asigna una mesa disponible.
-- La reservación se almacena correctamente.
-
 ---
 
 ## FR-04 Consultar Reservaciones
@@ -177,11 +160,6 @@ El sistema permitirá a los clientes crear reservaciones.
 ### Descripción
 
 El sistema permitirá visualizar las reservaciones registradas.
-
-### Criterios de Aceptación
-
-- Las reservaciones existentes son mostradas.
-- La información es correcta y actualizada.
 
 ---
 
@@ -191,12 +169,6 @@ El sistema permitirá visualizar las reservaciones registradas.
 
 El sistema permitirá modificar una reservación existente.
 
-### Criterios de Aceptación
-
-- El usuario puede editar la información.
-- Los cambios son validados.
-- Los cambios se guardan correctamente.
-
 ---
 
 ## FR-06 Cancelar Reservación
@@ -204,11 +176,6 @@ El sistema permitirá modificar una reservación existente.
 ### Descripción
 
 El sistema permitirá cancelar reservaciones.
-
-### Criterios de Aceptación
-
-- La reservación cambia a estado cancelado.
-- La mesa vuelve a estar disponible.
 
 ---
 
@@ -218,11 +185,6 @@ El sistema permitirá cancelar reservaciones.
 
 El sistema mostrará las mesas disponibles para una fecha y horario determinados.
 
-### Criterios de Aceptación
-
-- Se muestran únicamente las mesas disponibles.
-- Las mesas ocupadas son excluidas.
-
 ---
 
 ## FR-08 Detección de Conflictos
@@ -231,37 +193,21 @@ El sistema mostrará las mesas disponibles para una fecha y horario determinados
 
 El sistema evitará reservaciones duplicadas.
 
-### Criterios de Aceptación
-
-- No se permite reservar la misma mesa en la misma fecha y horario.
-- El sistema muestra una advertencia de conflicto.
-
 ---
 
-## FR-09 Gestión de Mesas
+## FR-09 Consulta de Mesas
 
 ### Descripción
 
-El sistema permitirá consultar la información de las mesas.
-
-### Criterios de Aceptación
-
-- Se muestra el número de mesa.
-- Se muestra la capacidad de cada mesa.
-- Se identifica si la mesa está disponible.
+El sistema permitirá consultar la información de las mesas disponibles.
 
 ---
 
-## FR-10 Gestión de Horarios
+## FR-10 Consulta de Horarios
 
 ### Descripción
 
 El sistema permitirá consultar los horarios disponibles.
-
-### Criterios de Aceptación
-
-- Los horarios disponibles son mostrados.
-- Los horarios ocupados no aparecen como disponibles.
 
 ---
 
@@ -271,11 +217,6 @@ El sistema permitirá consultar los horarios disponibles.
 
 El sistema almacenará la información de clientes y reservaciones.
 
-### Criterios de Aceptación
-
-- La información se guarda correctamente.
-- Los datos permanecen disponibles después de reiniciar el servidor.
-
 ---
 
 ## FR-12 Administración de Reservaciones
@@ -283,13 +224,6 @@ El sistema almacenará la información de clientes y reservaciones.
 ### Descripción
 
 El sistema permitirá administrar las reservaciones registradas.
-
-### Criterios de Aceptación
-
-- Se pueden crear reservaciones.
-- Se pueden modificar reservaciones.
-- Se pueden cancelar reservaciones.
-- Se pueden consultar reservaciones.
 
 ---
 
