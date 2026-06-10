@@ -1,38 +1,38 @@
 # 🍡 Software Requirements Specification (SRS)
-# Sistema de Reservaciones Mochi House
+# Mochi House Reservation System
 
 ---
 
-# 1. Introducción
+# 1. Introduction
 
-## 1.1 Propósito
+## 1.1 Purpose
 
-El propósito de este documento es definir los requisitos de software para el Sistema de Reservaciones Mochi House. El sistema permitirá a los clientes realizar y gestionar reservaciones de manera eficiente, evitando conflictos de horarios y optimizando el uso de las mesas del restaurante.
+The purpose of this document is to define the software requirements for the Mochi House Reservation System. The system will allow customers to create and manage reservations efficiently, preventing scheduling conflicts and optimizing the use of restaurant tables.
 
 ---
 
-## 1.2 Alcance
+## 1.2 Scope
 
-El Sistema de Reservaciones Mochi House es una aplicación web diseñada para administrar reservaciones de restaurante.
+The Mochi House Reservation System is a web application designed to manage restaurant reservations.
 
-El sistema permitirá a los usuarios:
+The system will allow users to:
 
-- Registrarse en el sistema.
-- Iniciar sesión.
-- Crear reservaciones.
-- Consultar reservaciones.
-- Modificar reservaciones.
-- Cancelar reservaciones.
-- Consultar disponibilidad de mesas.
-- Consultar horarios disponibles.
-- Asignar mesas según disponibilidad.
-- Evitar conflictos de reservaciones.
-- Almacenar información en una base de datos.
+- Register in the system.
+- Log in.
+- Create reservations.
+- View reservations.
+- Modify reservations.
+- Cancel reservations.
+- Check table availability.
+- View available time slots.
+- Assign tables based on availability.
+- Prevent reservation conflicts.
+- Store information in a database.
 
-### Tecnologías Utilizadas
+### Technologies Used
 
-| Tecnología | Versión |
-|------------|----------|
+| Technology | Version |
+|------------|---------|
 | HTML | HTML5 |
 | CSS | CSS3 |
 | JavaScript | ECMAScript 2023 |
@@ -40,397 +40,398 @@ El sistema permitirá a los usuarios:
 | Express.js | v5.1.0 |
 | MySQL | v8.0 |
 | Git | v2.49 |
-| GitHub | Plataforma Web |
+| GitHub | Web Platform |
 | Visual Studio Code | v1.100 |
----
-
-## 1.3 Audiencia Objetivo
-
-Este documento está dirigido a:
-
-- Desarrolladores
-- Probadores (Testers)
-- Docentes
-- Interesados del proyecto
-- Integrantes del equipo
 
 ---
 
-## 1.4 Definiciones
+## 1.3 Target Audience
 
-| Término | Definición |
-|----------|------------|
-| Reservación | Apartado de una mesa para una fecha y horario específico |
-| Cliente | Usuario que solicita una reservación |
-| Mesa | Espacio físico asignado a una reservación |
-| Disponibilidad | Mesas disponibles para reservar |
-| Conflicto | Dos reservaciones asignadas a la misma mesa en la misma fecha y horario |
+This document is intended for:
+
+- Developers
+- Testers
+- Instructors
+- Project Stakeholders
+- Team Members
 
 ---
 
-# 2. Descripción General
+## 1.4 Definitions
 
-## 2.1 Perspectiva del Producto
+| Term | Definition |
+|------|------------|
+| Reservation | Booking of a table for a specific date and time |
+| Customer | User who requests a reservation |
+| Table | Physical space assigned to a reservation |
+| Availability | Tables available for reservation |
+| Conflict | Two reservations assigned to the same table at the same date and time |
 
-El Sistema de Reservaciones Mochi House es una aplicación web independiente conectada a una base de datos MySQL.
+---
 
-### Componentes del Sistema
+# 2. Overall Description
+
+## 2.1 Product Perspective
+
+The Mochi House Reservation System is a standalone web application connected to a MySQL database.
+
+### System Components
 
 - Frontend (HTML, CSS, JavaScript)
 - Backend (Node.js, Express.js)
-- Base de Datos (MySQL)
+- Database (MySQL)
 
 ---
 
-## 2.2 Funciones del Producto
+## 2.2 Product Functions
 
-El sistema deberá:
+The system shall:
 
-1. Registrar clientes.
-2. Autenticar usuarios.
-3. Crear reservaciones.
-4. Consultar reservaciones.
-5. Modificar reservaciones.
-6. Cancelar reservaciones.
-7. Mostrar disponibilidad de mesas.
-8. Mostrar horarios disponibles.
-9. Evitar conflictos de reservaciones.
-10. Administrar información de reservaciones.
-11. Gestionar mesas disponibles.
-12. Almacenar información de manera segura.
-
----
-
-## 2.3 Clases de Usuario
-
-### Cliente
-
-**Permisos:**
-
-- Registrarse.
-- Iniciar sesión.
-- Crear reservaciones.
-- Consultar reservaciones.
-- Modificar reservaciones.
-- Cancelar reservaciones.
-- Consultar disponibilidad.
-- Consultar horarios.
+1. Register customers.
+2. Authenticate users.
+3. Create reservations.
+4. View reservations.
+5. Modify reservations.
+6. Cancel reservations.
+7. Display table availability.
+8. Display available time slots.
+9. Prevent reservation conflicts.
+10. Manage reservation information.
+11. Manage available tables.
+12. Store information securely.
 
 ---
 
-## 2.4 Restricciones
+## 2.3 User Classes
 
-- Se requiere conexión a Internet.
-- Se requiere una base de datos MySQL.
-- Se requiere un navegador moderno.
-- El servidor backend debe estar activo.
-- Las reservaciones deben validarse antes de almacenarse.
-- No se permiten reservaciones duplicadas.
+### Customer
 
----
+**Permissions:**
 
-# 3. Requisitos Funcionales
-
-## FR-01 Registro de Usuario
-
-### Descripción
-
-El sistema permitirá que nuevos usuarios creen una cuenta.
+- Register.
+- Log in.
+- Create reservations.
+- View reservations.
+- Modify reservations.
+- Cancel reservations.
+- Check availability.
+- View schedules.
 
 ---
 
-## FR-02 Inicio de Sesión
+## 2.4 Constraints
 
-### Descripción
-
-El sistema permitirá autenticar usuarios registrados.
-
----
-
-## FR-03 Crear Reservación
-
-### Descripción
-
-El sistema permitirá a los clientes crear reservaciones.
+- An Internet connection is required.
+- A MySQL database is required.
+- A modern web browser is required.
+- The backend server must be running.
+- Reservations must be validated before being stored.
+- Duplicate reservations are not allowed.
 
 ---
 
-## FR-04 Consultar Reservaciones
+# 3. Functional Requirements
 
-### Descripción
+## FR-01 User Registration
 
-El sistema permitirá visualizar las reservaciones registradas.
+### Description
 
----
-
-## FR-05 Modificar Reservación
-
-### Descripción
-
-El sistema permitirá modificar una reservación existente.
+The system shall allow new users to create an account.
 
 ---
 
-## FR-06 Cancelar Reservación
+## FR-02 User Login
 
-### Descripción
+### Description
 
-El sistema permitirá cancelar reservaciones.
-
----
-
-## FR-07 Consultar Disponibilidad
-
-### Descripción
-
-El sistema mostrará las mesas disponibles para una fecha y horario determinados.
+The system shall authenticate registered users.
 
 ---
 
-## FR-08 Detección de Conflictos
+## FR-03 Create Reservation
 
-### Descripción
+### Description
 
-El sistema evitará reservaciones duplicadas.
-
----
-
-## FR-09 Consulta de Mesas
-
-### Descripción
-
-El sistema permitirá consultar la información de las mesas disponibles.
+The system shall allow customers to create reservations.
 
 ---
 
-## FR-10 Consulta de Horarios
+## FR-04 View Reservations
 
-### Descripción
+### Description
 
-El sistema permitirá consultar los horarios disponibles.
-
----
-
-## FR-11 Almacenamiento de Datos
-
-### Descripción
-
-El sistema almacenará la información de clientes y reservaciones.
+The system shall allow users to view registered reservations.
 
 ---
 
-## FR-12 Administración de Reservaciones
+## FR-05 Modify Reservation
 
-### Descripción
+### Description
 
-El sistema permitirá administrar las reservaciones registradas.
+The system shall allow users to modify an existing reservation.
 
 ---
 
-# 4. Requisitos de Base de Datos
+## FR-06 Cancel Reservation
 
-## 4.1 Tabla: Clientes
+### Description
 
-| Campo | Tipo |
-|---------|---------|
-| id_cliente | INT |
-| nombre | VARCHAR(100) |
-| correo | VARCHAR(100) |
-| telefono | VARCHAR(15) |
-| contraseña | VARCHAR(255) |
+The system shall allow users to cancel reservations.
 
-## 4.2 Tabla: Horarios
+---
 
-| Campo | Tipo |
-|---------|---------|
-| id_horario | INT |
-| hora_inicio | TIME |
-| hora_fin | TIME |
+## FR-07 Check Availability
 
-## 4.3 Tabla: Mesas
+### Description
 
-| Campo | Tipo |
-|---------|---------|
-| id_mesa | INT |
-| numero_mesa | INT |
-| capacidad | INT |
+The system shall display available tables for a specific date and time.
 
-## 4.4 Tabla: Reservaciones
+---
 
-| Campo | Tipo |
-|---------|---------|
-| id_reservacion | INT |
-| id_cliente | INT |
-| id_mesa | INT |
-| id_horario | INT |
-| fecha | DATE |
-| numero_personas | INT |
-| estado | VARCHAR(20) |
+## FR-08 Conflict Detection
 
-## 4.5 Relaciones
+### Description
+
+The system shall prevent duplicate reservations.
+
+---
+
+## FR-09 Table Information Inquiry
+
+### Description
+
+The system shall allow users to view information about available tables.
+
+---
+
+## FR-10 Schedule Inquiry
+
+### Description
+
+The system shall allow users to view available schedules.
+
+---
+
+## FR-11 Data Storage
+
+### Description
+
+The system shall store customer and reservation information.
+
+---
+
+## FR-12 Reservation Management
+
+### Description
+
+The system shall allow management of registered reservations.
+
+---
+
+# 4. Database Requirements
+
+## 4.1 Table: Customers
+
+| Field | Type |
+|--------|------|
+| customer_id | INT |
+| name | VARCHAR(100) |
+| email | VARCHAR(100) |
+| phone | VARCHAR(15) |
+| password | VARCHAR(255) |
+
+## 4.2 Table: Schedules
+
+| Field | Type |
+|--------|------|
+| schedule_id | INT |
+| start_time | TIME |
+| end_time | TIME |
+
+## 4.3 Table: Tables
+
+| Field | Type |
+|--------|------|
+| table_id | INT |
+| table_number | INT |
+| capacity | INT |
+
+## 4.4 Table: Reservations
+
+| Field | Type |
+|--------|------|
+| reservation_id | INT |
+| customer_id | INT |
+| table_id | INT |
+| schedule_id | INT |
+| reservation_date | DATE |
+| number_of_people | INT |
+| status | VARCHAR(20) |
+
+## 4.5 Relationships
 
 ```text
-CLIENTES (1)
+CUSTOMERS (1)
       |
       |
-      └──────< RESERVACIONES >───────┐
+      └──────< RESERVATIONS >───────┐
                                      |
                                      |
-                                MESAS (1)
+                                 TABLES (1)
 
                                      |
                                      |
-                              HORARIOS (1)
+                               SCHEDULES (1)
 ```
 
-## 4.6 Reglas de Negocio
+## 4.6 Business Rules
 
-- Un cliente puede tener múltiples reservaciones.
-- Una reservación pertenece a un único cliente.
-- Una reservación está asociada a una sola mesa.
-- Una reservación está asociada a un solo horario.
-- No pueden existir dos reservaciones para la misma mesa en la misma fecha y horario.
-- El número de personas no puede superar la capacidad de la mesa.
-- No se pueden crear reservaciones para fechas pasadas.
-- Una reservación cancelada no puede modificarse.
-- Toda la información debe validarse antes de almacenarse.
+- A customer may have multiple reservations.
+- A reservation belongs to a single customer.
+- A reservation is associated with only one table.
+- A reservation is associated with only one schedule.
+- Two reservations cannot exist for the same table, date, and time.
+- The number of guests cannot exceed the table capacity.
+- Reservations cannot be created for past dates.
+- A canceled reservation cannot be modified.
+- All information must be validated before storage.
 
 ---
 
-# 5. Requisitos No Funcionales
+# 5. Non-Functional Requirements
 
-## 5.1 Rendimiento
+## 5.1 Performance
 
-- El sistema deberá responder en menos de 3 segundos.
-- Las búsquedas de reservaciones deberán ejecutarse rápidamente.
+- The system shall respond in less than 3 seconds.
+- Reservation searches shall execute quickly.
 
-## 5.2 Confiabilidad
+## 5.2 Reliability
 
-- No se deberá perder información de reservaciones.
-- Las transacciones de base de datos deberán completarse correctamente.
+- Reservation information shall not be lost.
+- Database transactions shall complete successfully.
 
-## 5.3 Seguridad
+## 5.3 Security
 
-- Se requerirá autenticación para acceder al sistema.
-- Las contraseñas deberán almacenarse cifradas.
-- Los usuarios no autorizados no podrán modificar datos.
+- Authentication shall be required to access the system.
+- Passwords shall be stored in encrypted form.
+- Unauthorized users shall not be able to modify data.
 
-## 5.4 Usabilidad
+## 5.4 Usability
 
-- La interfaz deberá ser intuitiva.
-- El proceso de reservación deberá requerir pocos pasos.
-- Los mensajes de error deberán ser comprensibles.
+- The interface shall be intuitive.
+- The reservation process shall require few steps.
+- Error messages shall be understandable.
 
-## 5.5 Compatibilidad
+## 5.5 Compatibility
 
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
 
-## 5.6 Mantenibilidad
+## 5.6 Maintainability
 
-- Se utilizará arquitectura MVC.
-- Los componentes estarán separados por responsabilidades.
-- El código deberá ser modular y documentado.
-
----
-
-# 6. Casos de Uso
-
-## UC-01 Registro de Usuario
-
-**Actor:** Cliente
-
-1. El usuario accede al formulario de registro.
-2. Captura sus datos.
-3. El sistema valida la información.
-4. Se crea la cuenta.
+- The system shall use an MVC architecture.
+- Components shall be separated by responsibilities.
+- The code shall be modular and documented.
 
 ---
 
-## UC-02 Inicio de Sesión
+# 6. Use Cases
 
-**Actor:** Cliente
+## UC-01 User Registration
 
-1. El usuario introduce sus credenciales.
-2. El sistema valida la información.
-3. Se concede acceso.
+**Actor:** Customer
 
----
-
-## UC-03 Crear Reservación
-
-**Actor:** Cliente
-
-1. El usuario selecciona fecha.
-2. El usuario selecciona horario.
-3. El usuario indica el número de personas.
-4. El sistema verifica disponibilidad.
-5. El sistema asigna una mesa.
-6. La reservación es almacenada.
+1. The user accesses the registration form.
+2. The user enters their information.
+3. The system validates the information.
+4. The account is created.
 
 ---
 
-## UC-04 Modificar Reservación
+## UC-02 User Login
 
-**Actor:** Cliente
+**Actor:** Customer
 
-1. El usuario selecciona una reservación.
-2. Modifica la información.
-3. El sistema valida los cambios.
-4. La reservación es actualizada.
-
----
-
-## UC-05 Cancelar Reservación
-
-**Actor:** Cliente
-
-1. El usuario selecciona una reservación.
-2. Confirma la cancelación.
-3. La reservación cambia a estado cancelado.
+1. The user enters their credentials.
+2. The system validates the information.
+3. Access is granted.
 
 ---
 
-## UC-06 Consultar Disponibilidad
+## UC-03 Create Reservation
 
-**Actor:** Cliente
+**Actor:** Customer
 
-1. El usuario selecciona fecha y horario.
-2. El sistema verifica disponibilidad.
-3. Se muestran las mesas disponibles.
-
----
-
-# 7. Matriz de Trazabilidad
-
-| Historia de Usuario | Requisito |
-|---------------------|-----------|
-| Usuario se registra | FR-01 |
-| Usuario inicia sesión | FR-02 |
-| Crear reservación | FR-03 |
-| Consultar reservaciones | FR-04 |
-| Modificar reservación | FR-05 |
-| Cancelar reservación | FR-06 |
-| Consultar disponibilidad | FR-07 |
-| Evitar conflictos | FR-08 |
-| Consultar mesas | FR-09 |
-| Consultar horarios | FR-10 |
-| Almacenar datos | FR-11 |
-| Administrar reservaciones | FR-12 |
+1. The user selects a date.
+2. The user selects a time slot.
+3. The user specifies the number of guests.
+4. The system checks availability.
+5. The system assigns a table.
+6. The reservation is stored.
 
 ---
 
-# 8. Mejoras Futuras
+## UC-04 Modify Reservation
 
-- Confirmación de reservaciones por correo electrónico.
-- Recordatorios automáticos.
-- Panel administrativo.
-- Estadísticas de reservaciones.
-- Diseño responsivo para dispositivos móviles.
-- Selección visual de mesas.
-- Gestión de perfil de usuario.
+**Actor:** Customer
+
+1. The user selects a reservation.
+2. The user modifies the information.
+3. The system validates the changes.
+4. The reservation is updated.
 
 ---
 
-# Fin del Documento
+## UC-05 Cancel Reservation
+
+**Actor:** Customer
+
+1. The user selects a reservation.
+2. The user confirms the cancellation.
+3. The reservation status changes to canceled.
+
+---
+
+## UC-06 Check Availability
+
+**Actor:** Customer
+
+1. The user selects a date and time.
+2. The system checks availability.
+3. Available tables are displayed.
+
+---
+
+# 7. Traceability Matrix
+
+| User Story | Requirement |
+|------------|------------|
+| User registers | FR-01 |
+| User logs in | FR-02 |
+| Create reservation | FR-03 |
+| View reservations | FR-04 |
+| Modify reservation | FR-05 |
+| Cancel reservation | FR-06 |
+| Check availability | FR-07 |
+| Prevent conflicts | FR-08 |
+| View tables | FR-09 |
+| View schedules | FR-10 |
+| Store data | FR-11 |
+| Manage reservations | FR-12 |
+
+---
+
+# 8. Future Enhancements
+
+- Reservation confirmation via email.
+- Automatic reminders.
+- Administrative dashboard.
+- Reservation statistics and reports.
+- Responsive design for mobile devices.
+- Visual table selection.
+- User profile management.
+
+---
+
+# End of Document
