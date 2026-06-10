@@ -1,146 +1,150 @@
-# Estrategia de Respaldo
+# Backup Strategy
 
-## Proyecto: Mochi House Reservation System
-
----
-
-## Objetivo
-
-Garantizar la integridad, disponibilidad y recuperación de la información almacenada en la base de datos del sistema **Mochi House Reservation System**, minimizando el riesgo de pérdida de datos ante errores humanos, fallos del sistema o modificaciones importantes.
+## Project: Mochi House Reservation System
 
 ---
 
-## Alcance
+## Objective
 
-Esta estrategia aplica a la base de datos **`mochi_house`**, la cual almacena la información necesaria para el funcionamiento del sistema de reservaciones.
-
-Las tablas incluidas en los respaldos son:
-
-* `clientes`
-* `mesas`
-* `horarios`
-* `reservaciones`
+To ensure the integrity, availability, and recoverability of the information stored in the **Mochi House Reservation System** database, minimizing the risk of data loss caused by human error, system failures, or major modifications.
 
 ---
 
-## Política de Respaldo
+## Scope
 
-Se realizará un **respaldo completo de la base de datos** en las siguientes situaciones:
+This strategy applies to the **`mochi_house`** database, which stores the information required for the operation of the reservation system.
 
-* Antes de implementar cambios importantes en la estructura de la base de datos.
-* Antes de desplegar una nueva versión del sistema.
-* Antes de ejecutar operaciones masivas de actualización o eliminación de registros.
-* Al finalizar el desarrollo de funcionalidades críticas relacionadas con las reservaciones.
-* Como medida preventiva antes de actividades de mantenimiento.
+The tables included in the backups are:
 
----
-
-## Tipo de Respaldo
-
-Se utilizará un **respaldo lógico completo** mediante la herramienta `mysqldump`, incluida en MySQL.
-
-Este tipo de respaldo permite exportar tanto la estructura como los datos de la base de datos a un archivo con extensión `.sql`.
-
-### Ventajas
-
-* Facilita la recuperación de la información.
-* Permite migrar la base de datos a otro entorno.
-* Genera archivos de texto fáciles de almacenar y administrar.
-* Es compatible con cualquier instalación estándar de MySQL.
+- `customers`
+- `tables`
+- `schedules`
+- `reservations`
 
 ---
 
-## Procedimiento para Generar un Respaldo
+## Backup Policy
 
-1. Abrir la terminal o consola de comandos.
-2. Acceder al directorio donde se almacenará el respaldo.
-3. Ejecutar el siguiente comando:
+A **full database backup** shall be performed in the following situations:
+
+- Before implementing significant changes to the database structure.
+- Before deploying a new version of the system.
+- Before executing bulk update or deletion operations.
+- After completing the development of critical reservation-related features.
+- As a preventive measure before maintenance activities.
+
+---
+
+## Backup Type
+
+A **full logical backup** will be performed using the `mysqldump` utility included with MySQL.
+
+This type of backup allows exporting both the database structure and data into a file with the `.sql` extension.
+
+### Advantages
+
+- Facilitates information recovery.
+- Allows migration of the database to another environment.
+- Generates text files that are easy to store and manage.
+- Compatible with any standard MySQL installation.
+
+---
+
+## Backup Creation Procedure
+
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the backup file will be stored.
+3. Execute the following command:
 
 ```bash
-mysqldump -u root -p mochi_house > respaldo_mochi_house.sql
+mysqldump -u root -p mochi_house > mochi_house_backup.sql
 ```
 
-### Descripción del comando
+### Command Description
 
-| Elemento                   | Descripción                                                         |
-| -------------------------- | ------------------------------------------------------------------- |
-| `mysqldump`                | Herramienta utilizada para exportar bases de datos MySQL.           |
-| `-u root`                  | Usuario con permisos sobre la base de datos.                        |
-| `-p`                       | Solicita la contraseña del usuario.                                 |
-| `mochi_house`              | Nombre de la base de datos que será respaldada.                     |
-| `>`                        | Redirecciona la salida hacia un archivo.                            |
-| `respaldo_mochi_house.sql` | Archivo generado con la estructura y los datos de la base de datos. |
-
----
-
-## Verificación del Respaldo
-
-Una vez generado el archivo, se deberá comprobar que:
-
-* El archivo `respaldo_mochi_house.sql` exista.
-* El tamaño del archivo sea mayor a 0 KB.
-* El contenido incluya sentencias como `CREATE TABLE` e `INSERT INTO`.
-
-Estas verificaciones permiten asegurar que el respaldo se generó correctamente.
+| Element | Description |
+|----------|------------|
+| `mysqldump` | Utility used to export MySQL databases. |
+| `-u root` | User account with database permissions. |
+| `-p` | Prompts for the user's password. |
+| `mochi_house` | Name of the database to be backed up. |
+| `>` | Redirects the output to a file. |
+| `mochi_house_backup.sql` | Generated file containing the database structure and data. |
 
 ---
 
-## Procedimiento para Restaurar un Respaldo
+## Backup Verification
 
-En caso de pérdida de información o necesidad de recuperación del sistema, se deberán seguir los siguientes pasos.
+Once the backup file has been generated, verify that:
 
-### 1. Crear la base de datos (si no existe)
+- The file `mochi_house_backup.sql` exists.
+- The file size is greater than 0 KB.
+- The contents include statements such as `CREATE TABLE` and `INSERT INTO`.
+
+These checks help ensure that the backup was generated successfully.
+
+---
+
+## Backup Restoration Procedure
+
+In the event of data loss or when system recovery is required, follow these steps.
+
+### 1. Create the Database (if it does not exist)
 
 ```sql
 CREATE DATABASE mochi_house;
 ```
 
-### 2. Restaurar la información
+### 2. Restore the Data
 
 ```bash
-mysql -u root -p mochi_house < respaldo_mochi_house.sql
+mysql -u root -p mochi_house < mochi_house_backup.sql
 ```
 
-### Descripción del comando
+### Command Description
 
-| Elemento                   | Descripción                                            |
-| -------------------------- | ------------------------------------------------------ |
-| `mysql`                    | Cliente de línea de comandos de MySQL.                 |
-| `-u root`                  | Usuario con permisos suficientes.                      |
-| `-p`                       | Solicita la contraseña correspondiente.                |
-| `mochi_house`              | Base de datos donde se restaurará la información.      |
-| `<`                        | Redirecciona el contenido del archivo SQL hacia MySQL. |
-| `respaldo_mochi_house.sql` | Archivo que contiene el respaldo previamente generado. |
+| Element | Description |
+|----------|------------|
+| `mysql` | MySQL command-line client. |
+| `-u root` | User account with sufficient privileges. |
+| `-p` | Prompts for the corresponding password. |
+| `mochi_house` | Database where the information will be restored. |
+| `<` | Redirects the SQL file contents into MySQL. |
+| `mochi_house_backup.sql` | File containing the previously generated backup. |
 
 ---
 
-## Almacenamiento de los Respaldos
+## Backup Storage
 
-Los archivos de respaldo deberán almacenarse en una ubicación segura y organizada.
+Backup files should be stored in a secure and organized location.
 
-Se recomienda utilizar nombres que incluyan la fecha de generación para facilitar su identificación.
+It is recommended to use filenames that include the generation date for easier identification.
 
-### Ejemplos
+### Examples
 
 ```text
-respaldo_mochi_house_2026-06-10.sql
-respaldo_mochi_house_2026-06-17.sql
-respaldo_mochi_house_2026-06-24.sql
+mochi_house_backup_2026-06-10.sql
+mochi_house_backup_2026-06-17.sql
+mochi_house_backup_2026-06-24.sql
 ```
 
 ---
 
-## Responsabilidades
+## Responsibilities
 
-El equipo de desarrollo será responsable de:
+The development team is responsible for:
 
-* Generar los respaldos cuando corresponda.
-* Verificar la correcta creación de los archivos.
-* Conservar una copia actualizada antes de realizar cambios importantes.
-* Ejecutar los procedimientos de restauración cuando sea necesario.
+- Creating backups when required.
+- Verifying the successful creation of backup files.
+- Maintaining an up-to-date backup before making major changes.
+- Executing restoration procedures when necessary.
 
 ---
 
-## Conclusión
+## Conclusion
 
-La estrategia de respaldo implementada para **Mochi House Reservation System** busca asegurar la continuidad del proyecto y la protección de la información almacenada. La generación periódica de respaldos y la existencia de procedimientos claros de recuperación constituyen buenas prácticas dentro de la administración de bases de datos y contribuyen a la confiabilidad del sistema.
+The backup strategy implemented for the **Mochi House Reservation System** aims to ensure project continuity and protect stored information. Regular backup creation and the existence of clear recovery procedures represent best practices in database administration and contribute to the overall reliability of the system.
+
+---
+
+# End of Document
