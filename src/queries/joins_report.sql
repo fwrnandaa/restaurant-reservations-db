@@ -15,3 +15,21 @@ INNER JOIN mesas m
     ON r.id_mesa = m.id_mesa
 INNER JOIN horarios h
     ON r.id_horario = h.id_horario;
+
+-- Mostrar todos los clientes, tengan o no reservaciones
+
+SELECT
+    c.nombre_completo,
+    r.fecha_reserva
+FROM clientes c
+LEFT JOIN reservaciones r
+    ON c.id_cliente = r.id_cliente;
+
+-- Mostrar todas las mesas aunque no tengan reservaciones
+
+SELECT
+    r.id_reservacion,
+    m.numero_mesa
+FROM reservaciones r
+RIGHT JOIN mesas m
+    ON r.id_mesa = m.id_mesa;
